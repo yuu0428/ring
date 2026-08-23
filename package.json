@@ -15,7 +15,8 @@
     "etl:zones": "tsx scripts/etl/zones.ts",
     "promote": "tsx scripts/promote-zones.ts",
     "explain": "tsx scripts/build-explain.ts",
-    "verify": "tsx scripts/verify.ts"
+    "verify": "tsx scripts/verify.ts",
+    "record": "tsx scripts/record-demo.ts"
   },
   "dependencies": {
     "@turf/bbox": "^7.4.0",

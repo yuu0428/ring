@@ -1,0 +1,21 @@
+{
+  "name": "ring-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ring のデモ操作動画（Remotion）",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render RingDemo out/ring-demo.mp4 --concurrency=4",
+    "still": "remotion still RingDemo out/cover.png --frame=40"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.400",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "remotion": "4.0.400"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "typescript": "^5.9.2"
+  }
+}

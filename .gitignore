@@ -24,3 +24,8 @@ pnpm-debug.log*
 
 # テスト
 coverage/
+
+# Remotion（動画）
+video/node_modules/
+# 録画の中間ファイル。scripts/record-demo.ts で再生成できる
+video/public/demo.webm

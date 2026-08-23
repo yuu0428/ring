@@ -1,0 +1,68 @@
+name: オープンデータの更新を検出する
+
+# 放置禁止区域は動く。データ元の変化を人手で追い続けるのは現実的でないため、
+# 週次で ETL を回して public/data に差分が出たら Pull Request を作る。
+# 自動でマージはしない（データの正しさは人が確認するべきものなので）。
+# 仕様: spec.md 3.6
+
+on:
+  schedule:
+    # 毎週月曜 06:00 JST（UTC 21:00 日曜）
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: オープンデータを取得して再生成する
+        id: etl
+        run: npm run etl 2>&1 | tee etl.log
+
+      - name: 差分があるか調べる
+        id: diff
+        run: |
+          if git diff --quiet -- public/data; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "データに変化はありませんでした"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- public/data
+          fi
+
+      - name: 判定エンジンのテスト
+        if: steps.diff.outputs.changed == 'true'
+        run: npm test
+
+      - name: Pull Request を作る
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data/weekly-refresh
+          title: 'data: オープンデータに更新がありました'
+          commit-message: 'data: 週次のオープンデータ再取得による更新'
+          body: |
+            週次の自動取得で `public/data/` に差分が出ました。
+
+            **確認してほしいこと**
+            - [ ] 放置禁止区域の指定駅が減っていないか（減っていたら取得失敗の可能性）
+            - [ ] 駐輪場・保管所の件数が極端に変わっていないか
+            - [ ] 区域変更（`data/manual/zone-changes.json`）に追記が必要か
+
+            差分の中身は「Files changed」で確認できます。
+            自動マージはしません。データの正しさは人が確認してください。
+          labels: area:data
+          add-paths: public/data

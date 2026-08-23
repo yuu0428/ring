@@ -1,0 +1,120 @@
+{
+  "_comment": "各区市町村が放置禁止区域の区域図を掲載している公式ページ。2026-08-23 に実在を確認したもののみを載せる。推測した URL は載せない（リンク切れはユーザーの不信につながるため）。区域は画像の地図でしか公開されていないため、Ring は判定に添えてこのページへの導線を出す。",
+  "_verified_at": "2026-08-23",
+  "wards": [
+    {
+      "municipality": "千代田区",
+      "zone_map_url": "https://www.city.chiyoda.lg.jp/koho/machizukuri/kotsu/jitensha/kinshikuiki.html",
+      "zone_map_title": "自転車等放置禁止区域の案内図",
+      "impound_url": "https://www.city.chiyoda.lg.jp/koho/machizukuri/kotsu/jitensha/henkan.html",
+      "areas": [
+        "秋葉原駅・岩本町駅周辺",
+        "御茶ノ水駅周辺",
+        "水道橋駅周辺",
+        "四ツ谷駅周辺",
+        "市ヶ谷駅周辺",
+        "飯田橋駅周辺",
+        "九段下駅周辺",
+        "神田駅周辺",
+        "大手町駅周辺",
+        "有楽町駅周辺",
+        "東京駅周辺"
+      ]
+    },
+    {
+      "municipality": "中央区",
+      "zone_map_url": "https://www.city.chuo.lg.jp/a0035/kurashi/koutsuu/rule/zidensyahoti.html",
+      "zone_map_title": "自転車の放置禁止区域",
+      "impound_url": null,
+      "areas": []
+    },
+    {
+      "municipality": "港区",
+      "zone_map_url": "https://www.city.minato.tokyo.jp/koutsuuanzen/kankyo-machi/kotsu/houchi/kinshi.html",
+      "zone_map_title": "自転車等の放置禁止区域",
+      "impound_url": "https://www.city.minato.tokyo.jp/koutsuuanzen/kankyo-machi/kotsu/houchi/tekkyojitensha.html",
+      "areas": [
+        "新橋駅周辺",
+        "田町駅西口周辺",
+        "浜松町駅周辺",
+        "内幸町駅周辺",
+        "神谷町駅周辺",
+        "芝公園駅周辺",
+        "虎ノ門ヒルズ駅周辺"
+      ]
+    },
+    {
+      "municipality": "文京区",
+      "zone_map_url": "https://www.city.bunkyo.lg.jp/b034/p001103.html",
+      "zone_map_title": "自転車等の放置禁止区域について",
+      "impound_url": null,
+      "areas": [
+        "春日・後楽園駅周辺",
+        "白山駅周辺",
+        "本郷三丁目駅周辺",
+        "水道橋駅周辺",
+        "飯田橋駅周辺",
+        "江戸川橋駅周辺",
+        "新大塚駅周辺",
+        "護国寺駅周辺",
+        "茗荷谷駅周辺",
+        "東大前駅周辺",
+        "本駒込駅周辺",
+        "根津駅周辺",
+        "千駄木駅周辺",
+        "千石駅周辺",
+        "駒込駅周辺",
+        "巣鴨駅周辺"
+      ]
+    },
+    {
+      "municipality": "渋谷区",
+      "zone_map_url": "https://www.city.shibuya.tokyo.jp/kurashi/kotsu/chiiki-jitensha/hochi.html",
+      "zone_map_title": "放置自転車対策",
+      "impound_url": "https://www.city.shibuya.tokyo.jp/shisetsu/churinjo/jitensha/bicycle2.html",
+      "areas": []
+    },
+    {
+      "municipality": "大田区",
+      "zone_map_url": "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/jitensha/houchikinshi2.html",
+      "zone_map_title": "自転車等の放置禁止",
+      "impound_url": null,
+      "areas": []
+    },
+    {
+      "municipality": "世田谷区",
+      "zone_map_url": "https://www.city.setagaya.lg.jp/01420/4474.html",
+      "zone_map_title": "世田谷区の放置自転車対策",
+      "impound_url": "https://www.city.setagaya.lg.jp/01420/4478.html",
+      "areas": []
+    },
+    {
+      "municipality": "杉並区",
+      "zone_map_url": "https://www.city.suginami.tokyo.jp/guide/machi/jitensha/1005038.html",
+      "zone_map_title": "自転車の放置防止啓発",
+      "impound_url": "https://www.city.suginami.tokyo.jp/s092/1606.html",
+      "areas": []
+    },
+    {
+      "municipality": "新宿区",
+      "zone_map_url": null,
+      "zone_map_title": null,
+      "impound_url": "https://www.city.shinjuku.lg.jp/seikatsu/kotsu02_000001_00021.html",
+      "areas": []
+    },
+    {
+      "municipality": "豊島区",
+      "zone_map_url": null,
+      "zone_map_title": null,
+      "impound_url": "https://www.city.toshima.lg.jp/334/machizukuri/kotsu/churinjo/020294.html",
+      "areas": []
+    },
+    {
+      "municipality": "府中市",
+      "zone_map_url": "https://www.city.fuchu.tokyo.jp/kurashi/sekatu/hochijitensha/hochi.html",
+      "zone_map_title": "放置自転車の撤去",
+      "impound_url": "https://www.city.fuchu.tokyo.jp/kurashi/sekatu/hochijitensha/hochi.html",
+      "areas": []
+    }
+  ]
+}

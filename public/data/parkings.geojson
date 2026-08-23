@@ -1,0 +1,4304 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "generated_at": "2026-08-23T04:31:12.381Z",
+    "generator": "scripts/etl/parkings.ts",
+    "spec_version": "1.0.0",
+    "license_note": "出典ごとに properties.source_name / source_url を参照"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.75513,
+          35.702111
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-0",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "水道橋A",
+        "address": "JR水道橋駅付近(東口改札側)",
+        "capacity_bicycle": 80,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.755575,
+          35.702049
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-1",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "水道橋B",
+        "address": "JR水道橋駅付近(東口改札反対側)",
+        "capacity_bicycle": 80,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.769524,
+          35.708371
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-2",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "湯島",
+        "address": "東京メトロ千代田線湯島駅1番出入り口付近",
+        "capacity_bicycle": 46,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.733015,
+          35.709648
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-3",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "江戸川橋A",
+        "address": "東京メトロ有楽町線江戸川橋駅付近(3番出入口側)",
+        "capacity_bicycle": 50,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.732739,
+          35.710128
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-4",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "江戸川橋B",
+        "address": "東京メトロ有楽町線江戸川橋駅付近(高速道路側)",
+        "capacity_bicycle": 210,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.730869,
+          35.711034
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-5",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "江戸川公園前",
+        "address": "東京メトロ有楽町線江戸川橋駅付近(1a出入口側)",
+        "capacity_bicycle": 60,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.736748,
+          35.718416
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-6",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "茗荷谷Ａ",
+        "address": "東京メトロ丸ノ内線茗荷谷駅付近(茗荷谷駅前交番横)",
+        "capacity_bicycle": 80,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.737497,
+          35.719231
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-7",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "茗荷谷Ｂ",
+        "address": "東京メトロ丸ノ内線茗荷谷駅付近(窪町東公園内)",
+        "capacity_bicycle": 90,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.737062,
+          35.716951
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-8",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "茗荷谷駅",
+        "address": "東京メトロ丸ノ内線茗荷谷駅構内",
+        "capacity_bicycle": 150,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.745112,
+          35.703275
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-9",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "飯田橋",
+        "address": "JR・都営大江戸線飯田橋駅付近（後楽交番横）",
+        "capacity_bicycle": 37,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.745739,
+          35.702844
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-10",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "飯田橋臨時",
+        "address": "JR・都営大江戸線飯田橋駅付近（神田川沿い）",
+        "capacity_bicycle": 73,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.758636,
+          35.716868
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-11",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東大前",
+        "address": "東京メトロ南北線東大前駅付近（1番出入り口側）",
+        "capacity_bicycle": 115,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.763654,
+          35.718974
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-12",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "根津一丁目",
+        "address": "東京メトロ千代田線根津駅付近(八重垣第一児童遊園内)",
+        "capacity_bicycle": 40,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.765507,
+          35.718009
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-13",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "根津二丁目",
+        "address": "東京メトロ千代田線根津駅付近(根津一丁目交差点付近)",
+        "capacity_bicycle": 20,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.761297,
+          35.707436
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-14",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "本郷三丁目",
+        "address": "都営大江戸線本郷三丁目駅付近（5番出入り口前）",
+        "capacity_bicycle": 106,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.759819,
+          35.706467
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-15",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "本郷三丁目駅",
+        "address": "東京メトロ丸ノ内線本郷三丁目駅構内",
+        "capacity_bicycle": 55,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.760314,
+          35.707351
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-16",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "本郷三丁目臨時",
+        "address": "都営大江戸線本郷三丁目駅付近（3番出入り口前）",
+        "capacity_bicycle": 100,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.753941,
+          35.724491
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-17",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "本駒込Ａ",
+        "address": "東京メトロ南北線本駒込駅付近(駒本小学校側)",
+        "capacity_bicycle": 100,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.753628,
+          35.724588
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-18",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "本駒込Ｂ",
+        "address": "東京メトロ南北線本駒込駅付近(浅嘉交番側)",
+        "capacity_bicycle": 15,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.752223,
+          35.721746
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-19",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "白山上",
+        "address": "都営三田線白山駅A3出入口付近",
+        "capacity_bicycle": 97,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.751012,
+          35.719938
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-20",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "白山下",
+        "address": "白山下交差点付近",
+        "capacity_bicycle": 70,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.750084,
+          35.720831
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-21",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "白山京華",
+        "address": "白山京華高校付近(白山通りバイパス沿い)",
+        "capacity_bicycle": 70,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.746008,
+          35.726979
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-22",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "千石南",
+        "address": "都営三田線千石駅A2出入口付近(白山5丁目側)",
+        "capacity_bicycle": 283,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.75209,
+          35.707662
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-23",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "シビックセンター幼児2人同乗用",
+        "address": "文京シビックセンター1階",
+        "capacity_bicycle": 30,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.753432,
+          35.708209
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-24",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "春日",
+        "address": "春日町交差点地下",
+        "capacity_bicycle": 263,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.751705,
+          35.707595
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-25",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "後楽園",
+        "address": "礫川公園地下",
+        "capacity_bicycle": 272,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.750939,
+          35.70797
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-26",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "礫川公園前",
+        "address": "礫川公園前",
+        "capacity_bicycle": 64,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.751639,
+          35.707697
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-27",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "後楽園駅前",
+        "address": "東京メトロ丸の内線後楽園駅４a出入口前",
+        "capacity_bicycle": 47,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.744849,
+          35.728207
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-28",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "千石東",
+        "address": "都営三田線千石駅A3出入口付近",
+        "capacity_bicycle": 11,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.744195,
+          35.728181
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-29",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "千石西",
+        "address": "都営三田線千石駅A4出入口付近",
+        "capacity_bicycle": 84,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.725312,
+          35.719349
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-30",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "護国寺駅西",
+        "address": "首都高速5号線護国寺IC付近",
+        "capacity_bicycle": 96,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.736175,
+          35.717556
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-31",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "茗荷谷中央第一",
+        "address": "アトラスタワー茗荷谷敷地内",
+        "capacity_bicycle": 46,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.736175,
+          35.717556
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-32",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "茗荷谷中央第二",
+        "address": "アトラスタワー茗荷谷敷地内",
+        "capacity_bicycle": 144,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.731218,
+          35.710355
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-33",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "江戸川橋交番横",
+        "address": "江戸川橋交番横",
+        "capacity_bicycle": 48,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7304,
+          35.71034
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-34",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "江戸川橋新目白通り",
+        "address": "文京関口一郵便局前",
+        "capacity_bicycle": 25,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "一時利用制"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.735984,
+          35.717654
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-3-35",
+        "municipality": "文京区",
+        "operator_type": "public",
+        "source_name": "文京区「自転車駐車場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/e8b3192a-7c3e-49a2-9c57-d39a46d0301a",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中央大学茗荷谷キャンパス内",
+        "address": "東京メトロ丸ノ内線茗荷谷駅付近（中央大学茗荷谷キャンパス内）",
+        "capacity_bicycle": 158,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": "定期利用制・一時利用制の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.728189,
+          35.619851
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-0",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大崎駅東口",
+        "address": "大崎1丁目4番先",
+        "capacity_bicycle": 225,
+        "capacity_moped": 102,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.728189,
+          35.619851
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-1",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大崎駅西口",
+        "address": "大崎2丁目1番先",
+        "capacity_bicycle": 901,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.728189,
+          35.619851
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-2",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大崎駅西口第2",
+        "address": "大崎3丁目5・6番先",
+        "capacity_bicycle": null,
+        "capacity_moped": 121,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.734659,
+          35.607615
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-3",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大井町駅東口",
+        "address": "東大井5丁目20番先他、東大井6丁目1番先",
+        "capacity_bicycle": 768,
+        "capacity_moped": 65,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.734659,
+          35.607615
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-4",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大井町駅西口",
+        "address": "大井1丁目7番9号",
+        "capacity_bicycle": 508,
+        "capacity_moped": 67,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.734659,
+          35.607615
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-5",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大井町駅西口第2",
+        "address": "大井4丁目3・4番先",
+        "capacity_bicycle": 482,
+        "capacity_moped": 21,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.718384,
+          35.608913
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-6",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "戸越公園駅第1",
+        "address": "戸越5丁目10番先",
+        "capacity_bicycle": 88,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.718384,
+          35.608913
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-7",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "戸越公園駅第2",
+        "address": "戸越6丁目6番先",
+        "capacity_bicycle": 15,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.716332,
+          35.614525
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-8",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "地下鉄戸越駅第1",
+        "address": "平塚1丁目6番先",
+        "capacity_bicycle": 63,
+        "capacity_moped": 1,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.712755,
+          35.605818
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-9",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "地下鉄中延駅第2",
+        "address": "中延4丁目7番先",
+        "capacity_bicycle": 74,
+        "capacity_moped": 3,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.712755,
+          35.605818
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-10",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "地下鉄中延駅第3",
+        "address": "豊町6丁目24番先",
+        "capacity_bicycle": 58,
+        "capacity_moped": 12,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.741467,
+          35.616516
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-11",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "新馬場駅",
+        "address": "南品川2丁目9番先",
+        "capacity_bicycle": 55,
+        "capacity_moped": 41,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.702721,
+          35.604882
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-12",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "旗の台駅第1",
+        "address": "旗の台2丁目6番先",
+        "capacity_bicycle": 110,
+        "capacity_moped": 8,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.702721,
+          35.604882
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-13",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "旗の台駅第2",
+        "address": "旗の台2丁目7番先",
+        "capacity_bicycle": 62,
+        "capacity_moped": 2,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.723602,
+          35.626159
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-14",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "五反田駅",
+        "address": "東五反田5丁目27番先、西五反田2丁目2番先他",
+        "capacity_bicycle": 403,
+        "capacity_moped": 81,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.746942,
+          35.595648
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-15",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大井競馬場前駅",
+        "address": "勝島1丁目4・5番先",
+        "capacity_bicycle": 411,
+        "capacity_moped": 19,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.726454,
+          35.608709
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-16",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "下神明駅",
+        "address": "二葉1丁目1番先",
+        "capacity_bicycle": 141,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.715026,
+          35.615975
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-17",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "戸越銀座駅",
+        "address": "平塚1丁目5番1号",
+        "capacity_bicycle": 96,
+        "capacity_moped": 2,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.750802,
+          35.620441
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-18",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "天王洲アイル駅第1",
+        "address": "東品川2丁目5番先",
+        "capacity_bicycle": 267,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.750802,
+          35.620441
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-19",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "天王洲アイル駅第2",
+        "address": "東品川2丁目4番先",
+        "capacity_bicycle": null,
+        "capacity_moped": 100,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.749688,
+          35.609715
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-20",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "品川シーサイド駅",
+        "address": "東品川4丁目12番先",
+        "capacity_bicycle": 412,
+        "capacity_moped": 20,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.727868,
+          35.588447
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-21",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大森駅水神口",
+        "address": "南大井6丁目15番・18番・23番先",
+        "capacity_bicycle": 1130,
+        "capacity_moped": 26,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.721893,
+          35.601764
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-22",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "西大井駅",
+        "address": "二葉2丁目26番6号",
+        "capacity_bicycle": 495,
+        "capacity_moped": 4,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.707503,
+          35.603863
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-23",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "荏原町駅",
+        "address": "中延5丁目1番1号",
+        "capacity_bicycle": 237,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.742984,
+          35.609279
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-24",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "青物横丁駅",
+        "address": "南品川2丁目4番先",
+        "capacity_bicycle": 330,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.738938,
+          35.59847
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4a-25",
+        "municipality": "品川区",
+        "operator_type": "public",
+        "source_name": "品川区「区営自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "立会川駅",
+        "address": "南大井1丁目3番1号",
+        "capacity_bicycle": 248,
+        "capacity_moped": 73,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.712986,
+          35.605853
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-0",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急中延駅",
+        "address": "中延4丁目5番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "最初の8時間:100円以後4時間毎に50円",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "080-9554-6565 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.712986,
+          35.605853
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-1",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急中延駅",
+        "address": "中延4丁目5番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "最初の8時間:210円以後4時間毎に100円",
+        "fee_monthly": "3670円（原付一種）",
+        "hours": null,
+        "note": "080-9554-6565 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.711958,
+          35.609944
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-2",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急荏原中延駅",
+        "address": "中延2丁目8番1号",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "160円",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "03-3788-3926 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.711958,
+          35.609944
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-3",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急荏原中延駅",
+        "address": "中延2丁目8番1号",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "320円",
+        "fee_monthly": "3670円（原付一種）4720円（原付二種）",
+        "hours": null,
+        "note": "03-3788-3926 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.736064,
+          35.60829
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-4",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "サイクルパーキング大井町A",
+        "address": "東大井5丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "120円 最初の2時間無料、以降6時間毎",
+        "fee_monthly": "1800円",
+        "hours": null,
+        "note": "0120-356-621"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.736064,
+          35.60829
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-5",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "サイクルパーキング大井町A",
+        "address": "東大井5丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "200円 最初の2時間無料、以降6時間毎",
+        "fee_monthly": "3300円",
+        "hours": null,
+        "note": "0120-356-621"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.716349,
+          35.633034
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-6",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "ＪＲ東急目黒ビル",
+        "address": "上大崎3丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円 3時間毎（内最初の1時間無料）",
+        "fee_monthly": "なし",
+        "hours": null,
+        "note": "0120-356-621"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.716349,
+          35.633034
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-7",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "ＪＲ東急目黒ビル",
+        "address": "上大崎3丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "200円 3時間毎（内最初の1時間無料）",
+        "fee_monthly": "なし",
+        "hours": null,
+        "note": "0120-356-621"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.713481,
+          35.625622
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-8",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急不動前駅",
+        "address": "西五反田5丁目12番1号",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円 最初の1時間無料、以降13時間毎",
+        "fee_monthly": "なし",
+        "hours": null,
+        "note": "03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698865,
+          35.615692
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-9",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急西小山駅（北）",
+        "address": "小山5丁目21番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円 最初の1時間無料、以降24時間毎",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698865,
+          35.615692
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-10",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急西小山駅（北）",
+        "address": "小山5丁目21番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "300円 24時間ごと",
+        "fee_monthly": "なし",
+        "hours": null,
+        "note": "03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698865,
+          35.615692
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-11",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急西小山駅（南）",
+        "address": "小山6丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円 8時間毎",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "090-4666-5774 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698865,
+          35.615692
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-12",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急西小山駅（南）",
+        "address": "小山6丁目1番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "320円 8時間毎",
+        "fee_monthly": "3670円（原付一種）",
+        "hours": null,
+        "note": "090-4666-5774 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.704405,
+          35.620519
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-13",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急武蔵小山駅東口",
+        "address": "小山台1丁目24番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "なし",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.704405,
+          35.620519
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-14",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急武蔵小山駅西口",
+        "address": "小山4丁目2番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円 8時間毎",
+        "fee_monthly": "2620円",
+        "hours": null,
+        "note": "080-2077-7660 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.704405,
+          35.620519
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-4b-15",
+        "municipality": "品川区",
+        "operator_type": "private",
+        "source_name": "品川区「民間自転車駐輪場」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/bba7c4ba-87ce-4a15-9cff-981c8a010ed0",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急武蔵小山駅西口",
+        "address": "小山4丁目2番",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "320円 8時間毎",
+        "fee_monthly": "3670円（原付一種）",
+        "hours": null,
+        "note": "080-2077-7660 03-5483-8871"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.682705,
+          35.658833
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-0",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "駒場東大前西口駐輪場",
+        "address": "東京都目黒区駒場2-7-1",
+        "capacity_bicycle": 38,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684572,
+          35.658715
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-1",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "駒場東大前東大口駐輪場",
+        "address": "東京都目黒区駒場3-8-1",
+        "capacity_bicycle": 36,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684945,
+          35.651428
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-2",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "池尻大橋駅北口駐輪場",
+        "address": "東京都目黒区大橋2-24-11",
+        "capacity_bicycle": 390,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.68716,
+          35.650614
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-3",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "池尻大橋駅東口駐輪場",
+        "address": "東京都目黒区大橋1-9-3",
+        "capacity_bicycle": 221,
+        "capacity_moped": null,
+        "fee_temporary": "3時間までは100円、以降24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "5:00〜1:00",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.699751,
+          35.64353
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-4",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中目黒駅前駐輪場",
+        "address": "東京都目黒区上目黒2-1-4",
+        "capacity_bicycle": 600,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "5:00〜1:00",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.699911,
+          35.644446
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-5",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "上目黒一丁目駐輪場",
+        "address": "東京都目黒区上目黒1-26-3",
+        "capacity_bicycle": 464,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "5:00〜1:00",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.690301,
+          35.637427
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-6",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "祐天寺駅西口第一駐輪場",
+        "address": "東京都目黒区五本木1-33-8",
+        "capacity_bicycle": 606,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.690964,
+          35.637745
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-7",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "祐天寺駅西口第二駐輪場",
+        "address": "東京都目黒区五本木1-31-6",
+        "capacity_bicycle": 114,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.689668,
+          35.635867
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-8",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "祐天寺駅南高架下駐輪場",
+        "address": "東京都目黒区五本木1-32-20",
+        "capacity_bicycle": 113,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.685926,
+          35.628419
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-9",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "学芸大学駅東口駐輪場",
+        "address": "東京都目黒区鷹番2-19-15",
+        "capacity_bicycle": 450,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "5:30〜23:00",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684998,
+          35.629614
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-10",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "学芸大学駅西口第一駐輪場",
+        "address": "東京都目黒区鷹番3-7-4",
+        "capacity_bicycle": 298,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.683303,
+          35.628042
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-11",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "学芸大学駅西口第二駐輪場",
+        "address": "東京都目黒区鷹番3-17-2",
+        "capacity_bicycle": 246,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に100円",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.675841,
+          35.617764
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-12",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中根一丁目駐輪場A",
+        "address": "東京都目黒区中根1-3-10先",
+        "capacity_bicycle": 140,
+        "capacity_moped": null,
+        "fee_temporary": "3時間までは100円、以降24時間毎に150円",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.675841,
+          35.617764
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-13",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中根一丁目駐輪場B",
+        "address": "東京都目黒区中根1-2-16先",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.667457,
+          35.606746
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-14",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "自由が丘駅南口駐輪場",
+        "address": "東京都目黒区自由が丘2-13-9",
+        "capacity_bicycle": 288,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "6:00〜23:00",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.693327,
+          35.610512
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-15",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "洗足二丁目駐輪場",
+        "address": "東京都目黒区洗足2-18-11",
+        "capacity_bicycle": 100,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/月",
+        "hours": "5:00〜1:00",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.67923,
+          35.606342
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-16",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "緑が丘駅駐輪場",
+        "address": "東京都目黒区緑が丘3-1-10",
+        "capacity_bicycle": 432,
+        "capacity_moped": null,
+        "fee_temporary": "24時間毎に150円",
+        "fee_monthly": "3000円/月",
+        "hours": "5:00〜1:00",
+        "note": "一時利用は、最初の１時間無料"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.697664,
+          35.642859
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-17",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "観音橋自転車置場",
+        "address": "東京都目黒区上目黒2-14先",
+        "capacity_bicycle": 1055,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.672596,
+          35.617492
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-18",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "八雲橋自転車置場",
+        "address": "東京都目黒区八雲1-11先",
+        "capacity_bicycle": 120,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.673792,
+          35.617915
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-19",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "三ノ橋自転車置場",
+        "address": "東京都目黒区八雲1-5先",
+        "capacity_bicycle": 290,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.676249,
+          35.61692
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-20",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "関根橋自転車置場",
+        "address": "東京都目黒区平町1-27先",
+        "capacity_bicycle": 850,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.677333,
+          35.616262
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-21",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "呑川橋自転車置場",
+        "address": "東京都目黒区平町1-25先",
+        "capacity_bicycle": 520,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.67795,
+          35.615372
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-22",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "稲荷橋自転車置場",
+        "address": "東京都目黒区平町1-23番先",
+        "capacity_bicycle": 135,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": "3000円/年",
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.700027,
+          35.644379
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-23",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中目黒アトラスタワー駐輪場",
+        "address": "東京都目黒区上目黒1-26-1",
+        "capacity_bicycle": 176,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.699631,
+          35.643696
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-24",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中目黒GT駐輪場",
+        "address": "東京都目黒区上目黒2-1-4",
+        "capacity_bicycle": 222,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "5:00〜1:00",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.69989,
+          35.643452
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-25",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中目黒ＧＳ第一ビル駐輪場",
+        "address": "東京都目黒区上目黒2-9-1",
+        "capacity_bicycle": 36,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698822,
+          35.645176
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-26",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急ストア中目黒本店駐輪場",
+        "address": "東京都目黒区上目黒1-21-12",
+        "capacity_bicycle": 52,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.699677,
+          35.644642
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-27",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "ES21　東急中目黒駅駐輪場A",
+        "address": "東京都目黒区上目黒1-22-4",
+        "capacity_bicycle": 36,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.695786,
+          35.641777
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-28",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "ES21　東急中目黒駅駐輪場B",
+        "address": "東京都目黒区上目黒2-45-12",
+        "capacity_bicycle": 72,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.691528,
+          35.637924
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-29",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "みずほ銀行祐天寺支店",
+        "address": "東京都目黒区祐天寺2-1-6",
+        "capacity_bicycle": 18,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.691086,
+          35.637409
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-30",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "祐天寺東急ストア駐輪場Ａ",
+        "address": "東京都目黒区祐天寺2-13-6",
+        "capacity_bicycle": 54,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.691086,
+          35.637409
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-31",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "祐天寺東急ストア駐輪場Ｂ",
+        "address": "東京都目黒区祐天寺2-13-6",
+        "capacity_bicycle": 33,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.69133,
+          35.638023
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-32",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急祐天寺駅高架下駐輪場",
+        "address": "東京都目黒区五本木1-11-8",
+        "capacity_bicycle": 90,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.686635,
+          35.631
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-33",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急学芸大学駅駐輪場",
+        "address": "東京都目黒区中央町2-34-18",
+        "capacity_bicycle": 330,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.685846,
+          35.629797
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-34",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急学芸大学駅前駐輪場",
+        "address": "東京都目黒区鷹番3-1-2",
+        "capacity_bicycle": 568,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.685974,
+          35.63018
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-35",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "アクトパーキング学芸大学",
+        "address": "東京都目黒区鷹番3-9-6",
+        "capacity_bicycle": 0,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.685059,
+          35.628727
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-36",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "三井リパーク学芸大学駅前駐輪場",
+        "address": "東京都目黒区鷹番3-6-4",
+        "capacity_bicycle": 10,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.69342,
+          35.62764
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-37",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "目黒郵便局駐輪場",
+        "address": "東京都目黒区目黒本町1-15-16",
+        "capacity_bicycle": 58,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.676514,
+          35.617893
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-38",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急都立大学駅駐輪場",
+        "address": "東京都目黒区中根1-4",
+        "capacity_bicycle": 548,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.675919,
+          35.617252
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-39",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急都立大学駅（西）駐輪場",
+        "address": "東京都目黒区中根1-5-2",
+        "capacity_bicycle": 112,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.675522,
+          35.618614
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-40",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "パラカ柿の木坂第４駐輪場",
+        "address": "東京都目黒区柿の木坂1-30-6",
+        "capacity_bicycle": 41,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.677048,
+          35.61824
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-41",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "三井リパーク都立大学駅第二駐輪場",
+        "address": "東京都目黒区平町1-26-23",
+        "capacity_bicycle": 80,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.669891,
+          35.607586
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-42",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "フレル・ウィズ自由が丘駐輪場",
+        "address": "東京都目黒区自由が丘1-6-9",
+        "capacity_bicycle": 71,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.668289,
+          35.609055
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-43",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "Luz自由が丘自転車駐車場",
+        "address": "東京都目黒区自由が丘2-9-6",
+        "capacity_bicycle": 15,
+        "capacity_moped": null,
+        "fee_temporary": "100円/2時間",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.668289,
+          35.609055
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-44",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "自由が丘駅前駐輪場",
+        "address": "東京都目黒区自由が丘2-9-6",
+        "capacity_bicycle": 50,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.698639,
+          35.616089
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-45",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "アットパーク西小山駅前駐輪場",
+        "address": "東京都目黒区原町1-7",
+        "capacity_bicycle": 85,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.694595,
+          35.610638
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-46",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東急洗足駅駐輪場",
+        "address": "東京都目黒区洗足2-6-8",
+        "capacity_bicycle": 291,
+        "capacity_moped": null,
+        "fee_temporary": "100円/日",
+        "fee_monthly": null,
+        "hours": "0:00〜23:59",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684937,
+          35.6077
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-47",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大岡山駅前第１駐輪場",
+        "address": "東京都目黒区大岡山2-10-1",
+        "capacity_bicycle": 65,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684937,
+          35.6077
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-5-48",
+        "municipality": "目黒区",
+        "operator_type": "public",
+        "source_name": "目黒区「自転車等駐輪場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb7b7721-bafb-4ad7-9da7-84ca1a1c4203",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "大岡山駅前第２駐輪場",
+        "address": "東京都目黒区大岡山2-10-1",
+        "capacity_bicycle": 82,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": null,
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.636253,
+          35.721986
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-0",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "鷺宮南自転車駐車場",
+        "address": "東京都中野区白鷺2-49",
+        "capacity_bicycle": 450,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1100円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.639751,
+          35.723681
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-1",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "鷺宮北自転車駐車場",
+        "address": "東京都中野区鷺宮3-30",
+        "capacity_bicycle": 248,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.640609,
+          35.721373
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-2",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "鷺宮東自転車駐車場",
+        "address": "東京都中野区若宮3-56",
+        "capacity_bicycle": 400,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1600円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.64498,
+          35.723079
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-3",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "都立家政北自転車駐車場",
+        "address": "東京都中野区鷺宮1-26-4",
+        "capacity_bicycle": 270,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.645197,
+          35.721792
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-4",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "都立家政南自転車駐車場",
+        "address": "東京都中野区若宮3-15-12",
+        "capacity_bicycle": 370,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.651439,
+          35.720039
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-5",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "野方第一自転車駐車場",
+        "address": "東京都中野区野方5-32",
+        "capacity_bicycle": 140,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "一時利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.651724,
+          35.720076
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-6",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "野方第二自転車駐車場",
+        "address": "東京都中野区野方5-32",
+        "capacity_bicycle": 260,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.653674,
+          35.718617
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-7",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "野方東自転車等駐車整理区画(南)",
+        "address": "東京都中野区野方5-25,5-26",
+        "capacity_bicycle": 344,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "年間利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.653675,
+          35.719872
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-8",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "野方東自転車等駐車整理区画(北)",
+        "address": "東京都中野区野方6-1",
+        "capacity_bicycle": 226,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "定期利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.660623,
+          35.706086
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-9",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "囲町自転車駐車場",
+        "address": "東京都中野区中野4-15-1、16-1",
+        "capacity_bicycle": 1350,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.662065,
+          35.708418
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-10",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中野四季の森公園地下自転車駐車場",
+        "address": "東京都中野区中野4-12",
+        "capacity_bicycle": 1662,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.663114,
+          35.718289
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-11",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "沼袋南自転車等駐車整理区画",
+        "address": "東京都中野区沼袋3-1",
+        "capacity_bicycle": 200,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "一時利用と年間利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.663196,
+          35.718593
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-12",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "沼袋第一自転車駐車場",
+        "address": "東京都中野区沼袋3-1",
+        "capacity_bicycle": 17,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "一時利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.665221,
+          35.719835
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-13",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "沼袋地下自転車駐車場",
+        "address": "東京都中野区沼袋1-34-14",
+        "capacity_bicycle": 470,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1600円",
+        "hours": "4:30-（翌）1:30",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.666383,
+          35.690223
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-14",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中野富士見町自転車駐車場",
+        "address": "東京都中野区弥生町5-23-17",
+        "capacity_bicycle": 90,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "年間利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.66726,
+          35.697042
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-15",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "杉山公園地下自転車駐車場",
+        "address": "東京都中野区本町6-15",
+        "capacity_bicycle": 240,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.666965,
+          35.704342
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-16",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中野南自転車駐車場",
+        "address": "東京都中野区中野2-24-9",
+        "capacity_bicycle": 500,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.669934,
+          35.696477
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-17",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "鍋横自転車駐車場",
+        "address": "東京都中野区本町4-44",
+        "capacity_bicycle": 250,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1600円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.671335,
+          35.732001
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-18",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "新江古田自転車駐車場",
+        "address": "東京都中野区江原町2-29-17",
+        "capacity_bicycle": 345,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "年間利用のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.672137,
+          35.716173
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-19",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "新井薬師北自転車駐車場",
+        "address": "東京都中野区上高田5-43-6",
+        "capacity_bicycle": 230,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.672171,
+          35.714823
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-20",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "新井薬師南自転車駐車場",
+        "address": "東京都中野区上高田3-36",
+        "capacity_bicycle": 70,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1700円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.673795,
+          35.692539
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-21",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中野新橋駅自転車駐車場",
+        "address": "東京都中野区弥生町2-24",
+        "capacity_bicycle": 250,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": "1900円",
+        "hours": "24時間",
+        "note": "一時利用と定期利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.682778,
+          35.698151
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-22",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "中野坂上駅自転車駐車場",
+        "address": "東京都中野区中央2-8",
+        "capacity_bicycle": 1052,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "4:00-（翌）1:30",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.683294,
+          35.707918
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-23",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東中野駅自転車駐車場",
+        "address": "東京都中野区東中野3-9",
+        "capacity_bicycle": 930,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "4:00-（翌）1:30",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.683657,
+          35.706064
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-24",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東中野駅前広場地下自転車駐車場",
+        "address": "東京都中野区東中野1-58-9先",
+        "capacity_bicycle": 220,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.684168,
+          35.710187
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-25",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "落合駅自転車等駐車整理区画",
+        "address": "東京都中野区東中野3-14",
+        "capacity_bicycle": 160,
+        "capacity_moped": null,
+        "fee_temporary": "1回100円",
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": "一時利用と年間利用の併設"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.686459,
+          35.706933
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-6-26",
+        "municipality": "中野区",
+        "operator_type": "public",
+        "source_name": "中野区「区営自転車駐車場設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/88c46c2e-2dc8-4b42-9418-0258f8bb7c21",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "東中野東自転車駐車場",
+        "address": "東京都中野区東中野5-3",
+        "capacity_bicycle": 34,
+        "capacity_moped": null,
+        "fee_temporary": null,
+        "fee_monthly": null,
+        "hours": "24時間",
+        "note": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.765675,
+          35.665855
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-7-0",
+        "municipality": "中央区",
+        "operator_type": "public",
+        "source_name": "中央区「区営二輪車駐車場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/de6da77f-f468-4f27-980b-7476afa67a5c",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "銀座地下二輪車駐車場",
+        "address": "銀座七丁目17番12号先（中央市場通り地下）",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円/時、9時間を越える場合は、定額1,000円 400円/泊、10,000円/月",
+        "fee_monthly": "可",
+        "hours": "午前5時から午後10時まで 一泊駐車は、午後7時から翌日午前9時まで",
+        "note": "全長2.7メートル以下"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.771741,
+          35.673272
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-7-1",
+        "municipality": "中央区",
+        "operator_type": "public",
+        "source_name": "中央区「区営二輪車駐車場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/de6da77f-f468-4f27-980b-7476afa67a5c",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "京橋プラザ二輪車駐車場",
+        "address": "銀座一丁目25番3号（京橋プラザ地下）",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円/時、9時間を越える場合は、定額1,000円 300円/泊、8,000円/月",
+        "fee_monthly": "可",
+        "hours": "午前7時から午後10時まで 一泊駐車は、午後7時から翌日午前9時まで",
+        "note": "全長2.7メートル以下"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.788561,
+          35.689081
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-7-2",
+        "municipality": "中央区",
+        "operator_type": "public",
+        "source_name": "中央区「区営二輪車駐車場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/de6da77f-f468-4f27-980b-7476afa67a5c",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "浜町公園地下二輪車駐車場",
+        "address": "日本橋浜町二丁目59番4号（浜町運動場地下）",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "100円/時、9時間を越える場合は、定額1,000円 300円/泊、8,000円/月",
+        "fee_monthly": "可",
+        "hours": "午前7時から午後10時まで 一泊駐車は、午後7時から翌日午前9時まで",
+        "note": "全長2.7メートル以下"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.773606,
+          35.66684
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-7-3",
+        "municipality": "中央区",
+        "operator_type": "public",
+        "source_name": "中央区「区営二輪車駐車場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/de6da77f-f468-4f27-980b-7476afa67a5c",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "備前橋二輪車駐車場",
+        "address": "築地七丁目1番15号（備前橋第一駐輪場隣）",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "8,000円/月",
+        "fee_monthly": "可 （定期駐車のみ）",
+        "hours": null,
+        "note": "全長2.7メートル以下"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.78603,
+          35.66351
+        ]
+      },
+      "properties": {
+        "id": "pk-DS-7-4",
+        "municipality": "中央区",
+        "operator_type": "public",
+        "source_name": "中央区「区営二輪車駐車場一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/de6da77f-f468-4f27-980b-7476afa67a5c",
+        "license": "CC BY 4.0",
+        "verified_at": "2026-08-23",
+        "name": "月島駅前二輪車駐車場",
+        "address": "月島二丁目1番1号（月島駅前第一駐輪場隣）",
+        "capacity_bicycle": null,
+        "capacity_moped": null,
+        "fee_temporary": "7,000円/月",
+        "fee_monthly": "可 （定期駐車のみ）",
+        "hours": null,
+        "note": "全長2.7メートル以下"
+      }
+    }
+  ]
+}

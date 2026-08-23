@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "generated_at": "2026-08-23T04:31:12.357Z",
+    "generator": "scripts/etl/zones.ts",
+    "spec_version": "1.0.0",
+    "license_note": "出典ごとに properties.source_name / source_url を参照"
+  },
+  "changes": [
+    {
+      "id": "chg-shibuya-shibuyaeki-2026",
+      "municipality": "渋谷区",
+      "title": "渋谷駅周辺の放置禁止区域を拡大",
+      "kind": "expand",
+      "effective_from": "2026-04-01",
+      "affected_stations": [
+        "渋谷"
+      ],
+      "summary": "渋谷駅の周辺で、放置禁止区域が広がります。いまは対象外の場所でも、この日から停めると警告のうえ即日撤去の対象になります。範囲は区の案内図で確認してください。",
+      "zone_ids": [],
+      "source_name": "渋谷区「放置自転車対策」",
+      "source_url": "https://www.city.shibuya.tokyo.jp/kurashi/kotsu/chiiki-jitensha/hochi.html",
+      "published_at": null,
+      "verified_at": "2026-08-23"
+    },
+    {
+      "id": "chg-shibuya-harajuku-2025",
+      "municipality": "渋谷区",
+      "title": "原宿・神宮前周辺の放置禁止区域を拡大",
+      "kind": "expand",
+      "effective_from": "2025-10-01",
+      "affected_stations": [
+        "原宿",
+        "明治神宮前"
+      ],
+      "summary": "原宿駅・神宮前の周辺で、放置禁止区域が広がりました。以前は対象外だった場所も、いまは撤去の対象です。",
+      "zone_ids": [],
+      "source_name": "渋谷区「放置自転車対策」",
+      "source_url": "https://www.city.shibuya.tokyo.jp/kurashi/kotsu/chiiki-jitensha/hochi.html",
+      "published_at": null,
+      "verified_at": "2026-08-23"
+    }
+  ]
+}

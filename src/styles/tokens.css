@@ -1,0 +1,79 @@
+/**
+ * デザイントークン（spec.md 7.7）
+ *
+ * このアプリの主題は「見えない境界を見せる」こと。
+ * 基図は暗いアスファルトまで落とし、色は判定の意味にだけ使う。
+ */
+:root {
+  /* 判定レベルの色。src/core/constants.ts の LEVEL_COLORS と一致させること */
+  --c-danger: #ff3b3b;
+  --c-danger-dim: rgba(255, 59, 59, 0.16);
+  --c-warn: #ffb020;
+  --c-warn-dim: rgba(255, 176, 32, 0.16);
+  --c-likely: #ff8a3d;
+  --c-likely-dim: rgba(255, 138, 61, 0.16);
+  --c-safe: #22c08a;
+  --c-safe-dim: rgba(34, 192, 138, 0.14);
+  --c-unknown: #8a93a0;
+  --c-unknown-dim: rgba(138, 147, 160, 0.14);
+
+  /* 背景 */
+  --bg-0: #0e1116;
+  --bg-1: #151a21;
+  --bg-2: #1c232c;
+  --bg-3: #252e39;
+
+  /* 文字 */
+  --fg-0: #f2f5f8;
+  --fg-1: #b9c2cd;
+  --fg-2: #7d8794;
+
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  --font: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI',
+    'Segoe UI', sans-serif;
+  --font-num: ui-rounded, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+
+  --shadow-sheet: 0 -12px 40px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+  --header-h: 52px;
+  --sheet-peek: 152px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* 判定レベルに応じてアクセント色を差し替える。
+   カードもクロスヘアも同じ変数を見るので、状態が画面全体で一致する。 */
+[data-level='inside'] {
+  --accent: var(--c-danger);
+  --accent-dim: var(--c-danger-dim);
+}
+[data-level='near'] {
+  --accent: var(--c-warn);
+  --accent-dim: var(--c-warn-dim);
+}
+[data-level='likely'] {
+  --accent: var(--c-likely);
+  --accent-dim: var(--c-likely-dim);
+}
+[data-level='outside'] {
+  --accent: var(--c-safe);
+  --accent-dim: var(--c-safe-dim);
+}
+[data-level='unknown'] {
+  --accent: var(--c-unknown);
+  --accent-dim: var(--c-unknown-dim);
+}

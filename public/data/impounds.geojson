@@ -1,0 +1,481 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "generated_at": "2026-08-23T04:31:12.385Z",
+    "generator": "scripts/etl/impounds.ts",
+    "spec_version": "1.0.0",
+    "license_note": "出典ごとに properties.source_name / source_url を参照"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.742703,
+          35.583837
+        ]
+      },
+      "properties": {
+        "id": "im-ota-0",
+        "name": "第１保管所（平和島陸橋下保管所）",
+        "municipality": "大田区",
+        "address": "東京都大田区平和島一丁目２番先",
+        "tel": "03-3765-5161",
+        "open_days": "休業日: 祝日・振替休日・12月29日から１月３日",
+        "open_hours": "11時から19時",
+        "open_rule": {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "11:00",
+          "end": "19:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": "祝日・振替休日・12月29日から１月３日",
+        "covered_stations": [
+          "大森",
+          "北千束",
+          "大岡山",
+          "田園調布",
+          "多摩川",
+          "沼部",
+          "鵜の木",
+          "長原",
+          "洗足池",
+          "石川台",
+          "雪が谷大塚",
+          "御嶽山",
+          "久が原",
+          "千鳥町",
+          "池上",
+          "大森海岸",
+          "平和島",
+          "大森町",
+          "梅屋敷",
+          "馬込",
+          "西馬込",
+          "昭和島",
+          "流通センター"
+        ],
+        "covered_area_text": "地域基盤整備第一課・第三課管内",
+        "capacity": 1000,
+        "fee_bicycle": "3,000円（区の案内で最新額を確認してください）",
+        "fee_moped": "5,000円（区の案内で最新額を確認してください）",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "大田区「保管所一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/fb723b2c-191e-490f-b3c4-50b823de40e1",
+        "verified_at": "2023/4/25"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.741563,
+          35.579819
+        ]
+      },
+      "properties": {
+        "id": "im-ota-1",
+        "name": "第２保管所（都大橋下保管所）",
+        "municipality": "大田区",
+        "address": "東京都大田区平和島五丁目１番先",
+        "tel": "03-3765-5162",
+        "open_days": "休業日: 祝日・振替休日・12月29日から１月３日",
+        "open_hours": "11時から19時",
+        "open_rule": {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "11:00",
+          "end": "19:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": "祝日・振替休日・12月29日から１月３日",
+        "covered_stations": [
+          "蒲田駅東口"
+        ],
+        "covered_area_text": "地域基盤整備第二課管内のうち一部住所地（蒲田１～５丁目、蒲田本町１～２丁目）",
+        "capacity": 500,
+        "fee_bicycle": "3,000円（区の案内で最新額を確認してください）",
+        "fee_moped": "5,000円（区の案内で最新額を確認してください）",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "大田区「保管所一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/fb723b2c-191e-490f-b3c4-50b823de40e1",
+        "verified_at": "2023/4/25"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.739992,
+          35.579596
+        ]
+      },
+      "properties": {
+        "id": "im-ota-2",
+        "name": "第３保管所（都大橋下保管所）",
+        "municipality": "大田区",
+        "address": "東京都大田区平和の森公園２番先",
+        "tel": "03-3765-5163",
+        "open_days": "休業日: 祝日・振替休日・12月29日から１月３日",
+        "open_hours": "11時から19時",
+        "open_rule": {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "11:00",
+          "end": "19:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": "祝日・振替休日・12月29日から１月３日",
+        "covered_stations": [
+          "蒲田駅西口",
+          "矢口渡",
+          "武蔵新田",
+          "下丸子",
+          "蓮沼"
+        ],
+        "covered_area_text": "地域基盤整備第二課管内のうち一部住所地（西蒲田１～８丁目、新蒲田１～３丁目、東矢口１～３丁目、矢口１～３丁目、下丸子１～４丁目、多摩川１～２丁目、千鳥１丁目（20、21、23）、千鳥２丁目（５、６、27、36、38～41）、千鳥３丁目（１、２、４～６、８～25））",
+        "capacity": 1000,
+        "fee_bicycle": "3,000円（区の案内で最新額を確認してください）",
+        "fee_moped": "5,000円（区の案内で最新額を確認してください）",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "大田区「保管所一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/fb723b2c-191e-490f-b3c4-50b823de40e1",
+        "verified_at": "2023/4/25"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.709031,
+          35.540647
+        ]
+      },
+      "properties": {
+        "id": "im-ota-3",
+        "name": "第６保管所（六郷橋下保管所）",
+        "municipality": "大田区",
+        "address": "東京都大田区仲六郷四丁目30番",
+        "tel": "03-3736-0372",
+        "open_days": "休業日: 祝日・振替休日・12月29日から１月３日",
+        "open_hours": "11時から19時",
+        "open_rule": {
+          "weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "11:00",
+          "end": "19:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": "祝日・振替休日・12月29日から１月３日",
+        "covered_stations": [
+          "京急蒲田",
+          "雑色",
+          "六郷土手",
+          "穴守稲荷",
+          "天空橋",
+          "糀谷",
+          "大鳥居"
+        ],
+        "covered_area_text": "地域基盤整備第二課管内のうち一部住所地（大森南１丁目（１～２、４、12～24）、大森南２丁目（18～19）、仲六郷１～４丁目、西六郷１～４丁目、東六郷１～３丁目、南六郷１～３丁目、東蒲田１～２丁目、南蒲田１～３丁目、萩中１～３丁目、本羽田１～３丁目、西糀谷１～４丁目、北糀谷１～２丁目、東糀谷１～６丁目、羽田１～６丁目、羽田旭町１番～16番、羽田空港１～３丁目）",
+        "capacity": 500,
+        "fee_bicycle": "3,000円（区の案内で最新額を確認してください）",
+        "fee_moped": "5,000円（区の案内で最新額を確認してください）",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "大田区「保管所一覧」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/fb723b2c-191e-490f-b3c4-50b823de40e1",
+        "verified_at": "2023/4/25"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.636114,
+          35.721881
+        ]
+      },
+      "properties": {
+        "id": "im-nakano-0",
+        "name": "鷺宮南自転車保管場所",
+        "municipality": "中野区",
+        "address": "白鷺2-49",
+        "tel": "03-5356-7708",
+        "open_days": "月曜日～土曜日／第2・第4日曜日（祝日、12月29日~1月3日を除く）",
+        "open_hours": "正午～午後8時",
+        "open_rule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "nth_sunday": [
+            2,
+            4
+          ],
+          "start": "12:00",
+          "end": "20:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": null,
+        "covered_stations": [
+          "中野",
+          "鷺ノ宮"
+        ],
+        "covered_area_text": "中野駅・鷺ノ宮駅周辺",
+        "capacity": null,
+        "fee_bicycle": "区の案内で確認してください",
+        "fee_moped": "区の案内で確認してください",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "中野区「区営自転車保管場所設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb590078-fbeb-4bac-8d6b-c440ec52c621",
+        "verified_at": "2026-08-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.641521,
+          35.721045
+        ]
+      },
+      "properties": {
+        "id": "im-nakano-1",
+        "name": "鷺宮東自転車保管場所",
+        "municipality": "中野区",
+        "address": "若宮3-56",
+        "tel": "03-5356-6505",
+        "open_days": "月曜日～土曜日／第2・第4日曜日（祝日、12月29日~1月3日を除く）",
+        "open_hours": "正午～午後8時",
+        "open_rule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "nth_sunday": [
+            2,
+            4
+          ],
+          "start": "12:00",
+          "end": "20:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": null,
+        "covered_stations": [
+          "東中野",
+          "落合",
+          "中野坂上",
+          "中野新橋",
+          "中野富士見町",
+          "新中野"
+        ],
+        "covered_area_text": "東中野駅・落合駅・中野坂上駅・中野新橋駅・中野富士見町駅・新中野駅周辺",
+        "capacity": null,
+        "fee_bicycle": "区の案内で確認してください",
+        "fee_moped": "区の案内で確認してください",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "中野区「区営自転車保管場所設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb590078-fbeb-4bac-8d6b-c440ec52c621",
+        "verified_at": "2026-08-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.627897,
+          35.728886
+        ]
+      },
+      "properties": {
+        "id": "im-nakano-2",
+        "name": "上鷺自転車保管場所",
+        "municipality": "中野区",
+        "address": "上鷺宮5-6",
+        "tel": "03-3825-7194",
+        "open_days": "月曜日～土曜日／第2・第4日曜日（祝日、12月29日~1月3日を除く）",
+        "open_hours": "正午～午後8時",
+        "open_rule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "nth_sunday": [
+            2,
+            4
+          ],
+          "start": "12:00",
+          "end": "20:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": null,
+        "covered_stations": [
+          "都立家政",
+          "富士見台",
+          "新江古田",
+          "野方",
+          "新井薬師"
+        ],
+        "covered_area_text": "都立家政駅・富士見台駅・新江古田駅・野方駅・新井薬師駅周辺",
+        "capacity": null,
+        "fee_bicycle": "区の案内で確認してください",
+        "fee_moped": "区の案内で確認してください",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "中野区「区営自転車保管場所設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb590078-fbeb-4bac-8d6b-c440ec52c621",
+        "verified_at": "2026-08-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.665186,
+          35.71972
+        ]
+      },
+      "properties": {
+        "id": "im-nakano-3",
+        "name": "沼袋地下自転車保管場所",
+        "municipality": "中野区",
+        "address": "沼袋1-34-14",
+        "tel": "03-3387-2178",
+        "open_days": "月～土,第2・第4日曜（祝日,12/29~1/3除く）",
+        "open_hours": "正午～午後8時",
+        "open_rule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "nth_sunday": [
+            2,
+            4
+          ],
+          "start": "12:00",
+          "end": "20:00",
+          "closed_holidays": true,
+          "closed_ranges": [
+            "12-29..01-03"
+          ]
+        },
+        "closed_days": null,
+        "covered_stations": [
+          "沼袋"
+        ],
+        "covered_area_text": "沼袋駅周辺",
+        "capacity": null,
+        "fee_bicycle": "区の案内で確認してください",
+        "fee_moped": "区の案内で確認してください",
+        "required_items": [
+          "自転車の鍵",
+          "本人確認ができるもの（運転免許証・保険証など）",
+          "返還手数料"
+        ],
+        "source_name": "中野区「区営自転車保管場所設置箇所」",
+        "source_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/eb590078-fbeb-4bac-8d6b-c440ec52c621",
+        "verified_at": "2026-08-23"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# ETL の取得キャッシュ（生データ。出力 JSON は public/data にコミットする）
+.cache/
+data/raw/
+
+# エディタ
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# ログ
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# テスト
+coverage/

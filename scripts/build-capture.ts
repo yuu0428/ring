@@ -39,21 +39,21 @@ async function main(): Promise<void> {
 
   const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{width:1800px;height:1000px;background:#0E1116;color:#F2F5F8;
+body{width:1600px;height:900px;background:#0E1116;color:#F2F5F8;
   font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
-  padding:46px 60px;position:relative;overflow:hidden;
+  padding:38px 48px;position:relative;overflow:hidden;
   -webkit-print-color-adjust:exact}
 body::before{content:"";position:absolute;inset:0;
   background:radial-gradient(1200px 700px at 82% 6%,rgba(255,59,59,.16),transparent 62%)}
 header{position:relative;display:flex;align-items:center;gap:18px;margin-bottom:8px}
-.logo{font-size:30px;font-weight:800;letter-spacing:.24em}
-.tag{font-size:25px;font-weight:800;color:#B9C2CD}
-.sub{position:relative;font-size:19px;color:#7D8794;margin-bottom:30px}
-.row{position:relative;display:flex;gap:34px;justify-content:center;align-items:flex-start}
-figure{width:312px}
+.logo{font-size:27px;font-weight:800;letter-spacing:.24em}
+.tag{font-size:22px;font-weight:800;color:#B9C2CD}
+.sub{position:relative;font-size:17px;color:#7D8794;margin-bottom:24px}
+.row{position:relative;display:flex;gap:28px;justify-content:center;align-items:flex-start}
+figure{width:282px}
 figure img{width:100%;border-radius:22px;border:1px solid rgba(255,255,255,.2);
   box-shadow:0 26px 60px rgba(0,0,0,.6);display:block}
-figcaption{font-size:17px;color:#B9C2CD;margin-top:14px;text-align:center}
+figcaption{font-size:15px;color:#B9C2CD;margin-top:12px;text-align:center}
 </style></head><body>
 <header>
   <svg width="34" height="34" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ figcaption{font-size:17px;color:#B9C2CD;margin-top:14px;text-align:center}
   writeFileSync(p, html, 'utf8');
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1800, height: 1000 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1600, height: 900 }, deviceScaleFactor: 1 });
   await page.goto(`file://${p}`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(300);

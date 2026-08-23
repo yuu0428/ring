@@ -138,38 +138,12 @@ export const SOURCES: Record<string, SourceDef> = {
   },
 
   // ---------------------------------------------------------------------
-  // 補助データ
+  // 地図・生成データ
+  //
+  // 調査段階では品川区「駅前放置自転車撤去情報」、目黒区・港区「自転車シェアリングポート」も
+  // 取得したが、現在の実装では読み込んでいないため台帳には載せない。
+  // 画面には「使っているデータ」として表示されるので、使っていないものを載せない。
   // ---------------------------------------------------------------------
-  'DS-12': {
-    id: 'DS-12',
-    name: '駅前放置自転車撤去情報（各駅ごと）',
-    provider: '品川区',
-    url: 'https://www.opendata.metro.tokyo.lg.jp/shinagawa/tekkyojoukyo_ekigoto.csv',
-    page_url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/91bf1825-e7f2-4d6f-951a-60b29a63c913',
-    format: 'CSV',
-    license: 'CC BY 4.0',
-    used_for: ['駅別の放置実績（前年比）'],
-  },
-  'DS-13': {
-    id: 'DS-13',
-    name: '自転車シェアリングポート',
-    provider: '目黒区',
-    url: 'https://data.bodik.jp/dataset/8a5f19d4-6f50-442c-9468-d4f0143a1d94/resource/2fa4a5e9-da4b-4b38-9eeb-fa49873d3af3/download/131105_sharecycle_port_20240425.csv',
-    page_url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/26a44479-a586-42f9-8cde-3011c6f1276b',
-    format: 'CSV',
-    license: 'CC BY 4.0',
-    used_for: ['代替手段（シェアサイクル）の位置'],
-  },
-  'DS-13b': {
-    id: 'DS-13b',
-    name: '港区自転車シェアリングポート',
-    provider: '港区',
-    url: 'https://opendata.city.minato.tokyo.jp/dataset/72c6c41e-1346-4e1c-a1f5-a04819e15a5f/resource/f01fc86c-7cdd-48a4-85ac-2217f0bc7304/download/minato_cyclesharingport.json',
-    page_url: 'https://catalog.data.metro.tokyo.lg.jp/dataset/6e6ef218-2cbd-4f15-8b34-bb7cd891fb1e',
-    format: 'GeoJSON',
-    license: 'CC BY 4.0',
-    used_for: ['代替手段（シェアサイクル）の位置'],
-  },
   'DS-14': {
     id: 'DS-14',
     name: '地理院タイル（淡色地図）',

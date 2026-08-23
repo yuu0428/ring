@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-23T04:55:28.385Z",
+    "generated_at": "2026-08-23T05:45:48.906Z",
     "generator": "scripts/etl/zones.ts",
     "spec_version": "1.0.0",
     "license_note": "出典ごとに properties.source_name / source_url を参照"

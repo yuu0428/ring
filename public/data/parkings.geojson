@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "meta": {
-    "generated_at": "2026-08-23T04:55:28.411Z",
+    "generated_at": "2026-08-23T05:45:48.933Z",
     "generator": "scripts/etl/parkings.ts",
     "spec_version": "1.0.0",
     "license_note": "出典ごとに properties.source_name / source_url を参照"

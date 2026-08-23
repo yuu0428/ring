@@ -16,7 +16,9 @@
     "promote": "tsx scripts/promote-zones.ts",
     "explain": "tsx scripts/build-explain.ts",
     "verify": "tsx scripts/verify.ts",
-    "record": "tsx scripts/record-demo.ts"
+    "record": "tsx scripts/record-demo.ts",
+    "deck": "tsx scripts/build-deck.ts",
+    "capture": "tsx scripts/build-capture.ts"
   },
   "dependencies": {
     "@turf/bbox": "^7.4.0",

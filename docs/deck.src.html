@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Ring — プレゼン資料</title>
+<style>
+@page { size: 1600px 900px; margin: 0; }
+:root{
+  --bg:#0E1116; --bg1:#151A21; --bg2:#1C232C;
+  --fg:#F2F5F8; --fg1:#B9C2CD; --fg2:#7D8794;
+  --danger:#FF3B3B; --warn:#FFB020; --likely:#FF8A3D; --safe:#22C08A;
+  --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.22);
+  --font:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{width:1600px;height:900px;position:relative;overflow:hidden;
+  page-break-after:always;break-after:page;background:var(--bg);
+  padding:82px 96px;display:flex;flex-direction:column;justify-content:center}
+.slide:last-child{page-break-after:auto}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(1200px 760px at 88% 12%,rgba(255,59,59,.13),transparent 60%)}
+.slide.ok::before{background:radial-gradient(1200px 760px at 88% 12%,rgba(34,192,138,.13),transparent 60%)}
+.slide>*{position:relative;z-index:1}
+
+.no{position:absolute;right:56px;bottom:40px;font-size:16px;color:var(--fg2);z-index:2;letter-spacing:.1em}
+.brandmini{position:absolute;left:96px;bottom:40px;display:flex;align-items:center;gap:9px;
+  font-size:15px;font-weight:800;letter-spacing:.2em;color:var(--fg2);z-index:2}
+
+.kicker{font-size:19px;font-weight:800;letter-spacing:.18em;color:var(--fg2);margin-bottom:22px}
+h1{font-size:104px;line-height:1.1;letter-spacing:-.025em;font-weight:800}
+h2{font-size:62px;line-height:1.22;letter-spacing:-.02em;font-weight:800;margin-bottom:30px}
+h2 em{font-style:normal;color:var(--danger)}
+h2 .ok{color:var(--safe)}
+p{font-size:28px;line-height:1.75;color:var(--fg1);max-width:30em}
+p.big{font-size:34px;color:var(--fg)}
+strong{color:var(--fg)}
+mark{background:rgba(255,59,59,.2);color:#FFB9B9;padding:2px 10px;border-radius:6px}
+mark.g{background:rgba(34,192,138,.2);color:#8CE9C4}
+
+.cols{display:flex;gap:26px;margin-top:14px}
+.card{flex:1;background:var(--bg1);border:1px solid var(--line);border-radius:20px;padding:34px}
+.card h3{font-size:27px;font-weight:800;margin-bottom:12px}
+.card p{font-size:21px;line-height:1.7}
+.card .n{font-size:15px;font-weight:800;letter-spacing:.14em;color:var(--fg2);margin-bottom:14px}
+
+.stats{display:flex;gap:24px;margin-top:34px}
+.stat{flex:1;background:var(--bg1);border:1px solid var(--line);border-radius:20px;padding:32px 34px}
+.stat b{display:block;font-size:76px;font-weight:800;letter-spacing:-.035em;line-height:1}
+.stat span{display:block;font-size:20px;color:var(--fg2);margin-top:14px;line-height:1.5}
+
+table{width:100%;border-collapse:collapse;font-size:23px}
+th,td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--fg2);font-size:18px;font-weight:700}
+td{color:var(--fg1)}
+td strong{color:var(--fg)}
+
+.split{display:flex;gap:56px;align-items:center}
+.split .l{flex:1.25}
+.split .r{flex:1;display:flex;justify-content:center}
+.shot{width:330px;border-radius:26px;border:1px solid var(--line2);box-shadow:0 30px 70px rgba(0,0,0,.55)}
+
+.flow{display:flex;align-items:stretch;gap:18px;margin-top:20px}
+.step{flex:1;background:var(--bg1);border:1px solid var(--line);border-radius:18px;padding:26px 24px;position:relative}
+.step .t{font-size:15px;font-weight:800;letter-spacing:.12em;color:var(--fg2);margin-bottom:10px}
+.step .h{font-size:24px;font-weight:800;margin-bottom:8px}
+.step .d{font-size:18px;color:var(--fg1);line-height:1.6}
+.arrow{align-self:center;color:var(--fg2);font-size:26px}
+
+.lv{display:flex;gap:20px;align-items:center;padding:18px 24px;border-radius:16px;
+  background:var(--bg1);border:1px solid var(--line);border-left-width:6px;margin-bottom:12px}
+.lv b{font-size:26px;min-width:8.6em}
+.lv span{font-size:20px;color:var(--fg1)}
+
+.pill{display:inline-block;padding:10px 24px;border-radius:100px;border:1px solid var(--line2);
+  background:var(--bg1);font-size:26px;font-weight:700;margin-top:34px}
+.tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.tag{font-size:20px;padding:10px 20px;border-radius:100px;background:var(--bg2);color:var(--fg1);border:1px solid var(--line)}
+
+.ring-bg{position:absolute;right:-180px;top:50%;transform:translateY(-50%);z-index:0}
+
+/* 情報量が多く下端がはみ出るスライド用。全体をひと回り詰める */
+.dense{padding:60px 96px}
+.dense h2{font-size:54px;margin-bottom:24px}
+.dense p{font-size:24px}
+.dense p.big{font-size:29px}
+.dense th,.dense td{padding:13px 18px;font-size:21px}
+.dense th{font-size:17px}
+.dense .stats{margin-top:24px;gap:20px}
+.dense .stat{padding:24px 28px}
+.dense .stat b{font-size:60px}
+.dense .stat span{font-size:18px;margin-top:10px}
+.dense .tag{font-size:18px;padding:8px 17px}
+.dense .tags{margin-top:20px;gap:10px}
+.ring-bg circle{fill:none}
+</style>
+</head>
+<body>
+
+<!-- 1 タイトル -->
+<div class="slide">
+  <svg class="ring-bg" width="900" height="900" viewBox="0 0 900 900">
+    <circle cx="450" cy="450" r="200" stroke="rgba(255,59,59,.30)" stroke-width="2"/>
+    <circle cx="450" cy="450" r="300" stroke="rgba(255,59,59,.20)" stroke-width="2" stroke-dasharray="10 8"/>
+    <circle cx="450" cy="450" r="400" stroke="rgba(255,59,59,.13)" stroke-width="2"/>
+  </svg>
+  <div style="display:flex;align-items:center;gap:20px;margin-bottom:34px">
+    <svg width="62" height="62" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="#FF3B3B" stroke-width="2.6"/>
+      <circle cx="12" cy="12" r="2.1" fill="#FF3B3B"/>
+    </svg>
+    <div style="font-size:40px;font-weight:800;letter-spacing:.24em">RING</div>
+  </div>
+  <h1>駅を囲む、<br><em>見えない輪。</em></h1>
+  <p class="big" style="margin-top:36px;max-width:26em">
+    自転車を停める前に、<strong>その場所に停めたら撤去されるのか</strong>を教えるサービス。
+  </p>
+  <div class="pill">yuu0428.github.io/ring</div>
+  <div class="no">01</div>
+</div>
+
+<!-- 2 課題 -->
+<div class="slide">
+  <div class="kicker">課題</div>
+  <h2>停めていいのか、<br><em>誰も教えてくれない。</em></h2>
+  <p class="big">
+    自転車を路上に停めてよいかは、<strong>放置禁止区域の中か外か</strong>で決まります。
+    区域の中なら、警告のうえ即日撤去。
+  </p>
+  <div class="stats">
+    <div class="stat"><b style="color:var(--danger)">3,000円</b><span>自転車を取り戻す費用の目安</span></div>
+    <div class="stat"><b style="color:var(--warn)">平日昼間</b><span>保管所へ取りに行く時間帯</span></div>
+    <div class="stat"><b>13,394台</b><span>都内の駅前放置台数（令和7年度）</span></div>
+  </div>
+  <p style="margin-top:30px">ところが、この区域がどこなのかを事前に知る手段が、事実上ありません。</p>
+  <div class="brandmini">RING</div><div class="no">02</div>
+</div>
+
+<!-- 3 なぜ分からないのか -->
+<div class="slide">
+  <div class="kicker">なぜ分からないのか</div>
+  <h2>3つの理由</h2>
+  <div class="cols">
+    <div class="card">
+      <div class="n">01</div>
+      <h3>境界が見えない</h3>
+      <p>区域の境界は道の途中にある。こちら側は大丈夫でも、数メートル先はアウト。標識を見つけられなければ気づけない。</p>
+    </div>
+    <div class="card">
+      <div class="n">02</div>
+      <h3>区ごとにバラバラ</h3>
+      <p>千代田区は案内図、渋谷区はPDFと地図システム、大田区は区域図。形式も見せ方も違い、横断して見る方法がない。</p>
+    </div>
+    <div class="card">
+      <div class="n">03</div>
+      <h3>しかも動く</h3>
+      <p>渋谷区は原宿・神宮前を2025年10月、渋谷駅周辺を2026年4月に拡大。昨日まで大丈夫だった場所が、今日から対象になる。</p>
+    </div>
+  </div>
+  <div class="brandmini">RING</div><div class="no">03</div>
+</div>
+
+<!-- 4 既存との違い -->
+<div class="slide">
+  <div class="kicker">既存サービスとの違い</div>
+  <h2>駐輪場検索は<br>「安全な場所のリスト」にすぎない</h2>
+  <p class="big">
+    リストに載っていない場所については、何も言えません。
+  </p>
+  <p class="big" style="margin-top:20px">
+    けれど実際に人が停めるのは —— 満車のとき、近くにないとき、5分だけ停めたいとき。<br>
+    <mark>つまりリストの外側です。</mark>
+  </p>
+  <div style="margin-top:44px;padding:34px 40px;border-radius:20px;border:1px solid rgba(255,59,59,.42);background:rgba(255,59,59,.09)">
+    <p class="big" style="max-width:none"><strong>Ring は路上のどこを指しても答えを返す。</strong><br>
+    これが唯一かつ最大の違いです。</p>
+  </div>
+  <div class="brandmini">RING</div><div class="no">04</div>
+</div>
+
+<!-- 5 調査結果 -->
+<div class="slide dense">
+  <div class="kicker">まず調べた</div>
+  <h2>放置禁止区域のデータは、<br><em>どこにも公開されていなかった。</em></h2>
+  <table>
+    <tr><th>調べた場所</th><th>結果</th></tr>
+    <tr><td><strong>東京都オープンデータカタログ</strong>（全文検索）</td>
+        <td>「禁止区域」該当125件を確認。自転車の放置禁止区域は <mark>0件</mark></td></tr>
+    <tr><td><strong>杉並区「自転車放置禁止区域」</strong>（唯一の登録CSV）</td>
+        <td>登録URLが <mark>404</mark>。区の地図システムごと到達不能</td></tr>
+    <tr><td><strong>千代田区・文京区・港区</strong>の公式ページ</td>
+        <td>区域は <mark>駅ごとの地図画像</mark> のみ。文章による境界記述なし</td></tr>
+    <tr><td><strong>条例・施行規則の別表</strong></td>
+        <td>境界を文章で定義した別表は見つからず</td></tr>
+  </table>
+  <p style="margin-top:22px;font-size:27px;color:var(--fg);max-width:none">
+    <strong>区は地図を持っているのに、機械が読める形では出していない。</strong>
+  </p>
+  <div class="brandmini">RING</div><div class="no">05</div>
+</div>
+
+<!-- 6 発見 -->
+<div class="slide ok dense">
+  <div class="kicker">発見</div>
+  <h2>都のExcelに、<span class="ok">公式フラグが埋もれていた。</span></h2>
+  <p class="big">
+    東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」。
+    駅名の隣に <code style="font-family:var(--mono);background:var(--bg2);padding:3px 10px;border-radius:6px;color:#E6C07B">＊</code> の列があり、凡例にこう書かれていました。
+  </p>
+  <div style="margin-top:26px;padding:24px 30px;border-radius:18px;background:#0A0D11;border:1px solid var(--line);
+       font-family:var(--mono);font-size:22px;line-height:1.7;color:#C8D3DF">
+    （注）＊印がある駅周辺には自転車等駐車場が整備され、<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;放置禁止区域が指定されている。
+  </div>
+  <p style="margin-top:26px;font-size:30px;color:var(--fg);max-width:none">
+    <strong>全都53自治体・663行・702駅を網羅する、唯一の公式かつ機械可読な指定情報。</strong>
+  </p>
+  <div class="stats">
+    <div class="stat"><b style="color:var(--safe)">519</b><span>放置禁止区域の指定がある駅</span></div>
+    <div class="stat"><b style="color:var(--safe)">99.9%</b><span>国土数値情報の駅座標との突合率<br>（702駅中701駅）</span></div>
+    <div class="stat"><b style="color:var(--warn)">0</b><span>公開されている区域ポリゴン</span></div>
+  </div>
+  <div class="brandmini">RING</div><div class="no">06</div>
+</div>
+
+<!-- 7 設計 -->
+<div class="slide">
+  <div class="kicker">データ設計</div>
+  <h2>精度の違うデータを、混ぜない</h2>
+  <div class="cols">
+    <div class="card" style="border-color:rgba(255,59,59,.4)">
+      <div class="n" style="color:var(--danger)">TIER A</div>
+      <h3>区域ポリゴン</h3>
+      <p>区の公式区域図から作図した多角形。精度は traced / described。<br><br>
+      <strong>現在0件。</strong>各区が区域を画像でしか公開しておらず、作図元が存在しないため。
+      形式と取り込み口は実装済みで、公開され次第そのまま載る。</p>
+    </div>
+    <div class="card" style="border-color:rgba(255,138,61,.4)">
+      <div class="n" style="color:var(--likely)">TIER B</div>
+      <h3>駅指定リング</h3>
+      <p>都Excelの指定フラグ＋駅座標から生成する円。精度は estimated（推定）。<br><br>
+      <strong>519件で全都を覆う。</strong>半径は固定値ではなく、その駅の乗入台数から算出。
+      <span style="font-family:var(--mono);font-size:17px">r = clamp(100 + 3.0√乗入台数, 120m, 400m)</span></p>
+    </div>
+  </div>
+  <p style="margin-top:28px;font-size:26px">
+    判定は Tier A を優先し、<strong>Tier A が覆う駅では Tier B の推定を使わない。</strong>
+    精密に「外」と判定した地点を、粗い円で塗り潰さないためです。
+  </p>
+  <div class="brandmini">RING</div><div class="no">07</div>
+</div>
+
+<!-- 8 判定 -->
+<div class="slide dense">
+  <div class="kicker">判定のしくみ</div>
+  <h2>5つの答えと、<em>「わからない」</em></h2>
+  <div class="lv" style="border-left-color:var(--danger)">
+    <b style="color:var(--danger)">ここは撤去対象です</b>
+    <span>作図された区域の内側。警告のうえ即日撤去されることがあります。</span></div>
+  <div class="lv" style="border-left-color:var(--warn)">
+    <b style="color:var(--warn)">あと◯mで撤去対象</b>
+    <span>区域のすぐ外側（30m以内）。境界には目印がないため、少し進むだけで対象になります。</span></div>
+  <div class="lv" style="border-left-color:var(--likely)">
+    <b style="color:var(--likely)">撤去される可能性が高い</b>
+    <span>指定駅の推定リングの内側。<strong>「推定」と明示</strong>し、事実として断定しません。</span></div>
+  <div class="lv" style="border-left-color:var(--safe)">
+    <b style="color:var(--safe)">撤去対象ではありません</b>
+    <span>区域外。ただし「通行を妨げる場所や私有地には停められません」を必ず併記。</span></div>
+  <div class="lv" style="border-left-color:var(--fg2)">
+    <b style="color:var(--fg2)">ここは判定できません</b>
+    <span>データが無い場所。<strong>「停めてよい」とは決して言いません。</strong></span></div>
+  <p style="margin-top:20px;font-size:24px;color:var(--fg);max-width:none">
+    <strong>判定できないことは失敗ではない。判定できないのに答えることが失敗である。</strong>
+  </p>
+  <div class="brandmini">RING</div><div class="no">08</div>
+</div>
+
+<!-- 9 画面 -->
+<div class="slide">
+  <div class="split">
+    <div class="l">
+      <div class="kicker">できること</div>
+      <h2>判定して終わりにしない</h2>
+      <div style="font-size:25px;line-height:2.1;color:var(--fg1)">
+        <div><strong style="color:var(--fg)">01　停めていいかの判定</strong>　中央の十字が指す任意の地点を5段階で</div>
+        <div><strong style="color:var(--fg)">02　境界の警告</strong>　「あと12mで撤去対象」——線と数字で見せる</div>
+        <div><strong style="color:var(--fg)">03　代替の提示</strong>　近くの駐輪場を距離順に。料金・収容台数つき</div>
+        <div><strong style="color:var(--fg)">04　区域変更の通知</strong>　施行前の拡大予定と最近の変更</div>
+        <div><strong style="color:var(--fg)">05　撤去後の案内</strong>　保管所・開所時間・持ち物・今日開いているか</div>
+        <div><strong style="color:var(--fg)">06　根拠の開示</strong>　出典URL・最終確認日・データの精度</div>
+      </div>
+    </div>
+    <div class="r"><img class="shot" src="{{IMG:01-verdict}}" alt="Ring の判定画面"></div>
+  </div>
+  <div class="brandmini">RING</div><div class="no">09</div>
+</div>
+
+<!-- 10 技術 -->
+<div class="slide dense">
+  <div class="kicker">技術構成</div>
+  <h2>サーバを持たない静的アプリ</h2>
+  <table>
+    <tr><th>領域</th><th>採用</th><th>理由</th></tr>
+    <tr><td>ビルド</td><td><strong>Vite 7 + TypeScript(strict)</strong></td><td>静的出力でPagesに直接載る。判定の型安全にstrictは必須</td></tr>
+    <tr><td>UI</td><td><strong>React 19</strong></td><td>判定状態→画面の対応を宣言的に書ける</td></tr>
+    <tr><td>地図</td><td><strong>MapLibre GL JS + 地理院タイル</strong></td><td>APIキー不要・無償。paintで基図の色調を制御でき独自の視覚言語を作れる</td></tr>
+    <tr><td>地理演算</td><td><strong>Turf.js</strong></td><td>点-多角形判定・最近傍境界点。判定は生命線なので自前実装しない</td></tr>
+    <tr><td>配信</td><td><strong>GitHub Actions → Pages</strong></td><td>無償・永続・リポジトリと一体</td></tr>
+  </table>
+  <div class="tags">
+    <span class="tag">位置座標を外部に送らない</span>
+    <span class="tag">オフラインで動く（PWA）</span>
+    <span class="tag">APIキー不要・課金ゼロ</span>
+    <span class="tag">判定エンジンは純粋関数＋18件のテスト</span>
+    <span class="tag">実ブラウザ自動検証20項目</span>
+  </div>
+  <p style="margin-top:20px;font-size:21px;max-width:none">
+    <strong>Google Maps を使わなかった理由：</strong>静的サイトではAPIキーが必ず露出し課金事故につながる。
+    さらにタイルのキャッシュが規約で禁じられており、路上で使うための<strong>オフライン動作と両立しない</strong>。
+  </p>
+  <div class="brandmini">RING</div><div class="no">10</div>
+</div>
+
+<!-- 11 オープンデータ -->
+<div class="slide dense">
+  <div class="kicker">使ったオープンデータ</div>
+  <h2>すべて公開データで動いている</h2>
+  <table>
+    <tr><th>データ</th><th>提供元</th><th>用途</th></tr>
+    <tr><td><strong>駅別放置自転車の状況（令和7年度）</strong></td><td>東京都都民安全総合対策本部</td><td><strong>放置禁止区域の指定有無</strong>・放置台数・収容能力</td></tr>
+    <tr><td><strong>国土数値情報 N02 鉄道データ</strong></td><td>国土交通省</td><td>駅の座標・路線名</td></tr>
+    <tr><td>自転車駐車場／駐輪場（6区・159件）</td><td>文京区・品川区・目黒区・中野区・中央区・大田区</td><td>駐輪場の位置・料金・収容台数</td></tr>
+    <tr><td><strong>保管所一覧／区営自転車保管場所</strong></td><td>大田区・中野区</td><td><strong>撤去駅と保管所の対応</strong>・開所時間</td></tr>
+    <tr><td>自転車シェアリングポート</td><td>目黒区・港区</td><td>代替手段</td></tr>
+    <tr><td>地理院タイル（淡色地図）</td><td>国土地理院</td><td>地図の基図</td></tr>
+  </table>
+  <p style="margin-top:20px;font-size:23px;max-width:none">
+    生成した区域データ（GeoJSON）は <strong>CC BY 4.0 で公開</strong>。誰でも使えます。
+  </p>
+  <div class="brandmini">RING</div><div class="no">11</div>
+</div>
+
+<!-- 12 これから -->
+<div class="slide ok">
+  <div class="split">
+    <div class="l">
+      <div class="kicker">これから</div>
+      <h2>データを使うだけでなく、<br><span class="ok">データを返す。</span></h2>
+      <p class="big">
+        区域データが公開されれば、Ring は推定ではなく<strong>正確な境界</strong>で答えられるようになります。
+      </p>
+      <p style="margin-top:22px">
+        そこでアプリの中に、区あての公開依頼文面を生成する機能を入れました。
+        現在の公開形式・求める形式・理由・想定される公益を書いた文面がコピーできます。
+        <strong>送るのは人の行為として残しました。</strong>
+      </p>
+      <div class="pill">yuu0428.github.io/ring</div>
+    </div>
+    <div class="r"><img class="shot" src="{{IMG:08-request}}" alt="公開リクエスト文面の生成画面"></div>
+  </div>
+  <div class="brandmini">RING</div><div class="no">12</div>
+</div>
+
+</body>
+</html>

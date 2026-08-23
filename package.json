@@ -18,7 +18,8 @@
     "verify": "tsx scripts/verify.ts",
     "record": "tsx scripts/record-demo.ts",
     "deck": "tsx scripts/build-deck.ts",
-    "capture": "tsx scripts/build-capture.ts"
+    "capture": "tsx scripts/build-capture.ts",
+    "deploy:cf": "npm run build && cp explain.html dist/explain.html && wrangler pages deploy dist --project-name ring --branch main --commit-dirty=true"
   },
   "dependencies": {
     "@turf/bbox": "^7.4.0",

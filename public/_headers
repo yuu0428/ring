@@ -1,0 +1,16 @@
+# Cloudflare Pages 用のヘッダ設定
+#
+# データファイルは ETL で再生成したときだけ変わる。長めにキャッシュしつつ、
+# 変更を取りこぼさないよう再検証させる。
+
+/data/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  # 位置情報は端末内でしか使わない。外部への送信経路を作らない
+  Permissions-Policy: geolocation=(self), camera=(), microphone=()

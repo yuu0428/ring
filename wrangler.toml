@@ -1,0 +1,14 @@
+# Cloudflare Pages への配信設定
+#
+# ビルド成果物 dist/ をそのまま配る静的サイト。サーバ機能は使わない。
+# GitHub Pages はリポジトリ名のサブパス（/ring/）で配信されるが、
+# Cloudflare Pages はルート（/）配信なので、ローカルの `npm run build`
+# （GITHUB_ACTIONS 環境変数が無い＝base が '/'）の成果物をそのまま上げる。
+#
+# デプロイ:
+#   wrangler login          ← 対話が必要。人が一度だけ実行する
+#   npm run deploy:cf
+
+name = "ring"
+compatibility_date = "2026-08-23"
+pages_build_output_dir = "dist"

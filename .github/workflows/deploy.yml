@@ -1,8 +1,14 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 # データは public/data/ にコミット済みのものをそのまま配信する。
 # ビルド時に外部の公式サイトへ取りにいかない（区のサイト都合でデプロイが壊れないように）。
 # 仕様: spec.md 3.6 / DECISIONS D-09
+#
+# 必要なシークレット（GitHub の Settings → Secrets and variables → Actions）:
+#   CLOUDFLARE_API_TOKEN … Cloudflare の「Cloudflare Pages: 編集」権限を持つ API トークン
+#   CLOUDFLARE_ACCOUNT_ID … Cloudflare のアカウント ID
+# 未設定の場合、デプロイ手順は自動でスキップされ、テストとビルドだけが走る。
+# 手元からは `npm run deploy:cf` で直接デプロイできる。
 
 on:
   push:
@@ -11,15 +17,13 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: cloudflare-pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,18 +47,20 @@ jobs:
       - name: 解説ファイルを同梱する
         run: cp explain.html dist/explain.html
 
-      - uses: actions/configure-pages@v5
+      - name: シークレットの有無を確認する
+        id: secrets
+        run: |
+          if [ -n "${{ secrets.CLOUDFLARE_API_TOKEN }}" ] && [ -n "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID が未設定のため、デプロイはスキップします"
+          fi
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Cloudflare Pages へデプロイ
+        if: steps.secrets.outputs.ready == 'true'
+        uses: cloudflare/wrangler-action@v3
         with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name ring --branch main

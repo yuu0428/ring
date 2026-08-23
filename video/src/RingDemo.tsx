@@ -358,7 +358,7 @@ const Outro: React.FC = () => {
             background: C.bg1,
           }}
         >
-          yuu0428.github.io/ring
+          ring-5oq.pages.dev
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

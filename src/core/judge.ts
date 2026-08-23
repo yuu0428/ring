@@ -196,7 +196,7 @@ export function judge(point: LngLat, data: RingData, opts: JudgeOptions = {}): V
     return finish({
       level: 'likely',
       confidence: 'low',
-      headline: '撤去対象の可能性が高い場所です',
+      headline: '撤去される可能性が高い',
       detail: st
         ? `${st.display_name}は放置禁止区域に指定されています。ここは駅から約${Math.round(hitB.d)}mで、区域の内側にあたる可能性が高い場所です。`
         : 'この付近は放置禁止区域に指定された駅の周辺です。',
@@ -217,7 +217,7 @@ export function judge(point: LngLat, data: RingData, opts: JudgeOptions = {}): V
     return finish({
       level: 'unknown',
       confidence: 'low',
-      headline: 'この付近は判定できません',
+      headline: 'ここは判定できません',
       detail: 'Ring が対応しているのは東京都内です。都外のデータは持っていません。',
       evidence: [
         {
@@ -238,7 +238,7 @@ export function judge(point: LngLat, data: RingData, opts: JudgeOptions = {}): V
   return finish({
     level: 'outside',
     confidence: nearest && nearest.d < 400 ? 'medium' : 'low',
-    headline: '撤去対象区域ではありません',
+    headline: '撤去対象ではありません',
     detail: OUTSIDE_CAVEAT,
     zone: nearest?.zone,
     distanceToBoundaryM: nearest?.d,

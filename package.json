@@ -13,7 +13,9 @@
     "typecheck": "tsc -b --noEmit false --emitDeclarationOnly false",
     "etl": "tsx scripts/etl/index.ts",
     "etl:zones": "tsx scripts/etl/zones.ts",
-    "promote": "tsx scripts/promote-zones.ts"
+    "promote": "tsx scripts/promote-zones.ts",
+    "explain": "tsx scripts/build-explain.ts",
+    "verify": "tsx scripts/verify.ts"
   },
   "dependencies": {
     "@turf/bbox": "^7.4.0",

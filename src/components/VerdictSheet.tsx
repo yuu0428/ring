@@ -195,12 +195,23 @@ export function VerdictSheet(): React.JSX.Element {
                 <h3 className="section-title">近くの駐輪場</h3>
                 <p className="detail">
                   この付近 800m 以内に、Ring が持っているデータの駐輪場はありません。
-                  駐輪場のオープンデータを公開している区が限られているためで、実際には存在する場合があります。
+                  駐輪場データを公開している区がまだ限られているためで、実際にはある場合があります。
                 </p>
               </div>
             )}
 
             {/* --- 撤去された後（FR-5）--- */}
+            {impounds.length === 0 && (
+              <div className="section">
+                <h3 className="section-title">撤去されてしまったら</h3>
+                <p className="detail">
+                  この区の保管所データはまだ持っていません。区のページで行き先を確認できます。
+                </p>
+                <button className="btn" style={{ marginTop: 8 }} onClick={() => openPanel('impound')}>
+                  区ごとの案内を見る
+                </button>
+              </div>
+            )}
             {impounds.length > 0 && (
               <div className="section">
                 <h3 className="section-title">撤去されてしまったら</h3>

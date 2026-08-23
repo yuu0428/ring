@@ -33,6 +33,10 @@ export function nearbyParkings(
  * 「その駅を担当する保管所」が分かっていればそれを最優先で返す。
  * 分からなければ同じ区の保管所を距離順で返す。
  */
+/** 担当保管所が分からないときに、これより遠い保管所は案内しない(m)。
+ *  11km 先の保管所を「撤去されたらここへ」と出すのは案内ではなく誤誘導になる。 */
+const IMPOUND_FALLBACK_MAX_M = 4000;
+
 export function impoundsForStation(
   station: Station | undefined,
   point: LngLat,
@@ -47,10 +51,16 @@ export function impoundsForStation(
     const covering = scored.filter((s) => s.item.properties.covered_stations.includes(station.name));
     if (covering.length > 0) return covering.sort((a, b) => a.distanceM - b.distanceM);
 
-    const sameWard = scored.filter((s) => s.item.properties.municipality === station.municipality);
+    // 駅が複数区にまたがる場合 municipality は「品川区・大田区」のようになるため部分一致で見る
+    const sameWard = scored.filter(
+      (s) => station.municipality != null && station.municipality.includes(s.item.properties.municipality),
+    );
     if (sameWard.length > 0) return sameWard.sort((a, b) => a.distanceM - b.distanceM);
   }
-  return scored.sort((a, b) => a.distanceM - b.distanceM).slice(0, 3);
+  return scored
+    .filter((s) => s.distanceM <= IMPOUND_FALLBACK_MAX_M)
+    .sort((a, b) => a.distanceM - b.distanceM)
+    .slice(0, 3);
 }
 
 /** 開所ルールから「今日は開いているか」を判定する。ルールが無ければ null（推測しない） */

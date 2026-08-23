@@ -17,7 +17,12 @@ export const TOKYO_BBOX: [number, number, number, number] = [138.9, 35.48, 139.9
 
 /** 位置情報が使えないときの初期表示（東京駅） */
 export const DEFAULT_CENTER: [number, number] = [139.7671, 35.6812];
-export const DEFAULT_ZOOM = 16;
+/**
+ * 既定のズーム。
+ * 17 だと約 200m の推定リングが画面外に出てしまい、このアプリの主役である「輪」が
+ * 一度も見えないまま終わる。15.6 なら半径 200〜400m の輪が画面に収まる。
+ */
+export const DEFAULT_ZOOM = 15.6;
 
 /** 区域変更を「最近の変更」として扱う期間（日） */
 export const RECENT_CHANGE_DAYS = 550;

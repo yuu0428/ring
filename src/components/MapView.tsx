@@ -2,8 +2,9 @@
  * 地図。MapLibre GL JS ＋ 地理院タイル（DECISIONS D-12）。
  *
  * 見た目の方針（spec.md 7.7）:
- *   基図は raster-* の paint プロパティで暗いアスファルト色まで落とす。
+ *   基図は raster-* の paint プロパティで彩度だけ軽く抜き、明るさは残す。
  *   CSS filter ではなく paint を使うのは、CSS だと上に乗せる区域や線まで着色されるため。
+ *   地図を明るいまま残し UI 側を暗くすることで、赤い「輪」が画面で最も強い要素になる。
  *   区域は塗りを弱く、境界線を強く描く。「輪」を見せるのがこのアプリの主題。
  */
 import { useEffect, useRef } from 'react';
@@ -22,6 +23,13 @@ export function MapView(): React.JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
   const map = useRef<MlMap | null>(null);
   const raf = useRef<number | null>(null);
+  /**
+   * ソースとレイヤの追加が済んだか。
+   * MapLibre の isStyleLoaded() は 'load' イベントより先に true になることがあり、
+   * それを条件にすると addSource 前に setData が呼ばれ、getSource() が undefined を返して
+   * データが黙って捨てられる（区域が一切描画されない不具合の原因だった）。
+   */
+  const layersReady = useRef(false);
 
   const data = useStore((s) => s.data);
   const verdict = useStore((s) => s.verdict);
@@ -56,18 +64,21 @@ export function MapView(): React.JSX.Element {
           },
         },
         layers: [
-          { id: 'bg', type: 'background', paint: { 'background-color': '#0E1116' } },
+          { id: 'bg', type: 'background', paint: { 'background-color': '#20262E' } },
           {
             id: 'gsi',
             type: 'raster',
             source: 'gsi',
             paint: {
-              // 淡色地図を暗いアスファルトに落とす。道路の形は残しつつ主役を譲る
-              'raster-saturation': -0.85,
-              'raster-brightness-min': 0.02,
-              'raster-brightness-max': 0.42,
-              'raster-contrast': 0.12,
-              'raster-opacity': 0.95,
+              // 彩度だけ軽く抜き、明るさは保つ。
+              // 当初は暗いアスファルト色まで落としたが、このアプリは日中の路上で使うため
+              // 地図が読めることを優先した（DECISIONS D-12 の変更）。
+              // 地図を明るいまま残し、UI 側を暗くすることで、赤い「輪」が最も目立つ。
+              'raster-saturation': -0.45,
+              'raster-brightness-min': 0.06,
+              'raster-brightness-max': 0.97,
+              'raster-contrast': 0.06,
+              'raster-opacity': 1,
             },
           },
         ],
@@ -75,6 +86,7 @@ export function MapView(): React.JSX.Element {
     });
     m.touchZoomRotate.disableRotation();
     map.current = m;
+    (window as unknown as { __ringMap?: unknown }).__ringMap = m; // 検証スクリプト用
 
     m.on('load', () => {
       m.addSource('zones', { type: 'geojson', data: EMPTY });
@@ -90,7 +102,7 @@ export function MapView(): React.JSX.Element {
         source: 'zones',
         paint: {
           'fill-color': '#FF3B3B',
-          'fill-opacity': ['interpolate', ['linear'], ['zoom'], 11, 0.06, 16, 0.13],
+          'fill-opacity': ['interpolate', ['linear'], ['zoom'], 11, 0.07, 16, 0.15],
         },
       });
       // 区域：境界線を強く。外側にぼかしを重ねて「輪」が光って見えるようにする
@@ -98,16 +110,16 @@ export function MapView(): React.JSX.Element {
         id: 'zone-glow',
         type: 'line',
         source: 'zones',
-        paint: { 'line-color': '#FF3B3B', 'line-width': 9, 'line-opacity': 0.16, 'line-blur': 7 },
+        paint: { 'line-color': '#FF3B3B', 'line-width': 14, 'line-opacity': 0.3, 'line-blur': 9 },
       });
       m.addLayer({
         id: 'zone-line',
         type: 'line',
         source: 'zones',
         paint: {
-          'line-color': '#FF5A5A',
-          'line-width': ['interpolate', ['linear'], ['zoom'], 11, 1.2, 16, 2.6],
-          'line-opacity': 0.95,
+          'line-color': '#E01B1B',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 11, 1.4, 16, 3.2],
+          'line-opacity': 1,
         },
       });
 
@@ -117,8 +129,8 @@ export function MapView(): React.JSX.Element {
         type: 'line',
         source: 'planned',
         paint: {
-          'line-color': '#FFB020',
-          'line-width': 2.2,
+          'line-color': '#C77400',
+          'line-width': 2.6,
           'line-dasharray': [2.4, 1.8],
           'line-opacity': 0.9,
         },
@@ -132,8 +144,8 @@ export function MapView(): React.JSX.Element {
         minzoom: 13,
         paint: {
           'circle-radius': ['interpolate', ['linear'], ['zoom'], 13, 3, 17, 6.5],
-          'circle-color': '#22C08A',
-          'circle-stroke-color': '#06110C',
+          'circle-color': '#0E9E6E',
+          'circle-stroke-color': '#FFFFFF',
           'circle-stroke-width': 1.4,
           'circle-opacity': 0.95,
         },
@@ -147,9 +159,9 @@ export function MapView(): React.JSX.Element {
         layout: { 'line-cap': 'round' },
         paint: {
           'line-color': ['get', 'color'],
-          'line-width': 2,
+          'line-width': 2.6,
           'line-dasharray': [1.4, 1.2],
-          'line-opacity': 0.95,
+          'line-opacity': 1,
         },
       });
       m.addLayer({
@@ -158,9 +170,9 @@ export function MapView(): React.JSX.Element {
         source: 'boundary',
         filter: ['==', ['geometry-type'], 'Point'],
         paint: {
-          'circle-radius': 4.5,
+          'circle-radius': 5,
           'circle-color': ['get', 'color'],
-          'circle-stroke-color': '#0E1116',
+          'circle-stroke-color': '#FFFFFF',
           'circle-stroke-width': 2,
         },
       });
@@ -186,6 +198,7 @@ export function MapView(): React.JSX.Element {
         },
       });
 
+      layersReady.current = true;
       pushData();
     });
 
@@ -202,6 +215,7 @@ export function MapView(): React.JSX.Element {
 
     return () => {
       if (raf.current != null) cancelAnimationFrame(raf.current);
+      layersReady.current = false;
       m.remove();
       map.current = null;
     };
@@ -212,7 +226,7 @@ export function MapView(): React.JSX.Element {
   const pushData = (): void => {
     const m = map.current;
     const d = useStore.getState().data;
-    if (!m || !d || !m.isStyleLoaded()) return;
+    if (!m || !d || !layersReady.current) return;
     const today = new Date().toISOString().slice(0, 10);
 
     const active = d.zones.filter(
@@ -236,17 +250,15 @@ export function MapView(): React.JSX.Element {
 
   useEffect(() => {
     if (!data) return;
-    const m = map.current;
-    if (!m) return;
-    if (m.isStyleLoaded()) pushData();
-    else m.once('load', pushData);
+    // レイヤがまだなら、'load' の最後で pushData が呼ばれるのでここでは何もしない
+    if (layersReady.current) pushData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   // --- 境界への線 ---------------------------------------------------------
   useEffect(() => {
     const m = map.current;
-    if (!m?.isStyleLoaded()) return;
+    if (!m || !layersReady.current) return;
     const src = m.getSource('boundary') as maplibregl.GeoJSONSource | undefined;
     if (!src) return;
 
@@ -259,12 +271,12 @@ export function MapView(): React.JSX.Element {
     const from = useStore.getState().center;
     const color =
       verdict.level === 'inside'
-        ? '#FF6B6B'
+        ? '#D91414'
         : verdict.level === 'near'
-          ? '#FFB020'
+          ? '#C77400'
           : verdict.level === 'likely'
-            ? '#FF8A3D'
-            : '#22C08A';
+            ? '#D2540E'
+            : '#0E9E6E';
     src.setData({
       type: 'FeatureCollection',
       features: [
@@ -281,7 +293,7 @@ export function MapView(): React.JSX.Element {
   // --- 現在地 -------------------------------------------------------------
   useEffect(() => {
     const m = map.current;
-    if (!m?.isStyleLoaded()) return;
+    if (!m || !layersReady.current) return;
     const src = m.getSource('me') as maplibregl.GeoJSONSource | undefined;
     if (!src) return;
     src.setData(

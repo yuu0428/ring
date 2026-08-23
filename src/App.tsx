@@ -59,7 +59,12 @@ export default function App(): React.JSX.Element {
           <Icon d="M12 3a6 6 0 0 0-6 6v3.5L4.5 16h15L18 12.5V9a6 6 0 0 0-6-6zM10 19a2 2 0 0 0 4 0" />
         </button>
         <button className="iconbtn" onClick={() => openPanel('sources')} aria-label="データについて">
-          <Icon d="M12 3v18M3 12h18" />
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               strokeWidth="1.9" strokeLinecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 11v5" />
+            <path d="M12 7.6v.5" />
+          </svg>
         </button>
       </header>
 

@@ -249,12 +249,32 @@ export async function buildStations(): Promise<Station[]> {
         unmatched.push(`${row.municipality}/${rawName}`);
         continue;
       }
-      st.municipality = row.municipality;
-      // 複数行が同じ駅を指す場合、指定ありを優先する（安全側に倒す）
+      // 都の注記にある通り「東京駅」のように複数の区市町村に計上される駅がある。
+      // 上書きすると最後の区の値だけが残り、実態より極端に小さい台数になるため合算する。
+      const first = st.municipality == null;
+      if (first) st.municipality = row.municipality;
+      else if (!st.municipality!.includes(row.municipality)) {
+        st.municipality = `${st.municipality}・${row.municipality}`;
+      }
+      // 指定ありを優先する（安全側に倒す）
       st.designated = st.designated === true ? true : row.designated;
-      st.group_label = row.names.length > 1 ? row.label : null;
-      st.counts = row.counts;
-      st.capacity = row.capacity;
+      st.group_label = row.names.length > 1 ? row.label : st.group_label;
+      st.counts = first
+        ? row.counts
+        : {
+            bicycle: (st.counts?.bicycle ?? 0) + row.counts.bicycle,
+            moped: (st.counts?.moped ?? 0) + row.counts.moped,
+            small_moped: (st.counts?.small_moped ?? 0) + row.counts.small_moped,
+            motorcycle: (st.counts?.motorcycle ?? 0) + row.counts.motorcycle,
+            total: (st.counts?.total ?? 0) + row.counts.total,
+          };
+      st.capacity = first
+        ? row.capacity
+        : {
+            bicycle: (st.capacity?.bicycle ?? 0) + row.capacity.bicycle,
+            moped: (st.capacity?.moped ?? 0) + row.capacity.moped,
+            total: (st.capacity?.total ?? 0) + row.capacity.total,
+          };
       st.source = source;
     }
   }

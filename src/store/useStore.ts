@@ -3,7 +3,7 @@
  * 高頻度で変わる値（center / verdict）と、めったに変わらない値（data）を分けて持つ。
  */
 import { create } from 'zustand';
-import { DEFAULT_CENTER } from '../core/constants';
+import { DEFAULT_CENTER, DEFAULT_ZOOM } from '../core/constants';
 import { judge } from '../core/judge';
 import type { LngLat, Verdict } from '../core/types';
 import { loadRingData, type LoadedData } from '../data/loader';
@@ -83,7 +83,7 @@ export const useStore = create<State>((set, get) => ({
       (pos) => {
         const c: LngLat = [pos.coords.longitude, pos.coords.latitude];
         set({ geo: 'granted', userPos: c });
-        get().goTo(c, 17);
+        get().goTo(c, DEFAULT_ZOOM);
       },
       (err) => {
         const denied = err.code === err.PERMISSION_DENIED;

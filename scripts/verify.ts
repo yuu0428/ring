@@ -15,7 +15,7 @@ const SHOTS = 'docs/screenshots';
 const MOBILE = { width: 390, height: 844 };
 
 /** 東京駅（放置禁止区域の指定あり） */
-const TOKYO_STATION = { lon: 139.7671, lat: 35.6812 };
+const TOKYO_STATION = { longitude: 139.7671, latitude: 35.6812 };
 
 interface Result {
   name: string;
@@ -66,10 +66,27 @@ async function main(): Promise<void> {
 
   // --- 起動して判定が出るか ---------------------------------------------
   await page.waitForSelector('.sheet .headline', { timeout: 25_000 });
-  await page.waitForTimeout(2500); // 現在地移動と地図描画の落ち着きを待つ
+  await page.waitForTimeout(4000); // 現在地移動・タイル取得・地図描画の落ち着きを待つ
   const h1 = await headline(page);
   check('起動して判定が表示される', h1.length > 0, h1);
   await shot(page, '01-verdict');
+
+  // --- 区域が「地図に描かれている」か ------------------------------------
+  // 判定が正しくても描画されないことがある（実際に発生した）。
+  // 判定ロジックとは別に、レンダリング結果そのものを確認する。
+  const rendered = await page.evaluate(() => {
+    const m = (window as unknown as { __ringMap?: {
+      queryRenderedFeatures: (o?: unknown) => unknown[];
+      getZoom: () => number;
+    } }).__ringMap;
+    if (!m) return { zone: -1, fill: -1, zoom: -1 };
+    return {
+      zone: m.queryRenderedFeatures({ layers: ['zone-line'] } as never).length,
+      fill: m.queryRenderedFeatures({ layers: ['zone-fill'] } as never).length,
+      zoom: m.getZoom(),
+    };
+  });
+  check('放置禁止区域の輪が地図に描画されている', rendered.zone > 0 && rendered.fill > 0, JSON.stringify(rendered));
 
   // --- 指定駅の上では撤去対象側の判定になるか ----------------------------
   const level = await page.getAttribute('.app', 'data-level');
@@ -143,7 +160,7 @@ async function main(): Promise<void> {
   check('駅名検索が機能する', hits > 0, `${hits} 件`);
   await shot(page, '04-search');
   await page.locator('.panel-body .row').first().click();
-  await page.waitForTimeout(1800);
+  await page.waitForTimeout(3200);
   check('検索結果を選ぶと地図が移動する', (await page.locator('.panel').count()) === 0);
   await shot(page, '05-shibuya');
 
@@ -173,18 +190,13 @@ async function main(): Promise<void> {
   await page.locator('button[aria-label="閉じる"]').click();
 
   // --- 撤去されたら（FR-5）----------------------------------------------
-  // 大田区の保管所が見える場所へ移動してから開く
-  await page.evaluate(() => {
-    // 大森駅付近
-    const ev = new CustomEvent('ring:goto');
-    document.dispatchEvent(ev);
-  });
+  // 大田区の保管所が見える大森駅へ移動してから開く
   await page.locator('button[aria-label="場所をさがす"]').click();
   await page.locator('.searchbox').fill('大森');
   await page.waitForTimeout(400);
   if ((await page.locator('.panel-body .row').count()) > 0) {
     await page.locator('.panel-body .row').first().click();
-    await page.waitForTimeout(1800);
+    await page.waitForTimeout(3000);
   } else {
     await page.locator('button[aria-label="閉じる"]').click();
   }
@@ -220,7 +232,7 @@ async function main(): Promise<void> {
   });
   await p2.goto(URL, { waitUntil: 'domcontentloaded' });
   await p2.waitForSelector('.sheet .headline', { timeout: 25_000 });
-  await p2.waitForTimeout(2500);
+  await p2.waitForTimeout(4000);
   const h2 = await headline(p2);
   check('位置情報なしでも判定が出る（東京駅で起動）', h2.length > 0, h2);
   await shot(p2, '10-no-geolocation');

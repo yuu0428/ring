@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-23T04:31:12.311Z",
+    "generated_at": "2026-08-23T04:55:28.338Z",
     "generator": "scripts/etl/stations.ts",
     "spec_version": "1.0.0",
     "license_note": "出典ごとに properties.source_name / source_url を参照"
@@ -291,20 +291,20 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "調布市",
+      "municipality": "三鷹市・調布市",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 7,
+        "bicycle": 9,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 7
+        "motorcycle": 1,
+        "total": 10
       },
       "capacity": {
-        "bicycle": 3895,
-        "moped": 50,
-        "total": 3945
+        "bicycle": 4365,
+        "moped": 77,
+        "total": 4442
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -662,20 +662,20 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 5,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 0
+        "motorcycle": 2,
+        "total": 7
       },
       "capacity": {
-        "bicycle": 0,
+        "bicycle": 218,
         "moped": 0,
-        "total": 0
+        "total": 218
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -698,20 +698,20 @@
         "東京地下鉄",
         "東日本旅客鉄道"
       ],
-      "municipality": "葛飾区",
+      "municipality": "足立区・葛飾区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 10,
+        "bicycle": 19,
         "moped": 1,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 11
+        "total": 20
       },
       "capacity": {
-        "bicycle": 35,
-        "moped": 22,
-        "total": 57
+        "bicycle": 9241,
+        "moped": 146,
+        "total": 9387
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -1894,20 +1894,20 @@
         "京王電鉄",
         "東急電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 1,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 0
+        "motorcycle": 1,
+        "total": 2
       },
       "capacity": {
-        "bicycle": 46,
-        "moped": 3,
-        "total": 49
+        "bicycle": 592,
+        "moped": 6,
+        "total": 598
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -1981,20 +1981,20 @@
       "operators": [
         "東武鉄道"
       ],
-      "municipality": "練馬区",
+      "municipality": "板橋区・練馬区",
       "designated": true,
       "group_label": "下赤塚駅・地下鉄赤塚駅",
       "counts": {
-        "bicycle": 3,
+        "bicycle": 29,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 3
+        "total": 29
       },
       "capacity": {
-        "bicycle": 1073,
-        "moped": 17,
-        "total": 1090
+        "bicycle": 2454,
+        "moped": 25,
+        "total": 2479
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -2034,20 +2034,20 @@
       "operators": [
         "東武鉄道"
       ],
-      "municipality": "板橋区",
+      "municipality": "豊島区・板橋区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 16,
-        "moped": 0,
+        "bicycle": 17,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 16
+        "total": 18
       },
       "capacity": {
-        "bicycle": 275,
+        "bicycle": 505,
         "moped": 35,
-        "total": 310
+        "total": 540
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -2693,20 +2693,20 @@
       "operators": [
         "小田急電鉄"
       ],
-      "municipality": "狛江市",
+      "municipality": "世田谷区・狛江市",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 17,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 0
+        "motorcycle": 1,
+        "total": 18
       },
       "capacity": {
-        "bicycle": 1374,
-        "moped": 21,
-        "total": 1395
+        "bicycle": 2920,
+        "moped": 75,
+        "total": 2995
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -4213,7 +4213,7 @@
         "多摩都市モノレール",
         "西武鉄道"
       ],
-      "municipality": "武蔵村山市",
+      "municipality": "立川市・東大和市・武蔵村山市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -4224,9 +4224,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 4810,
+        "moped": 34,
+        "total": 4844
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -4479,20 +4479,20 @@
         "東京地下鉄",
         "東日本旅客鉄道"
       ],
-      "municipality": "北区",
+      "municipality": "文京区・豊島区・北区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 20,
-        "moped": 3,
+        "bicycle": 70,
+        "moped": 5,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 23
+        "motorcycle": 2,
+        "total": 77
       },
       "capacity": {
-        "bicycle": 700,
-        "moped": 0,
-        "total": 700
+        "bicycle": 1476,
+        "moped": 18,
+        "total": 1494
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -4547,7 +4547,7 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "世田谷区",
+      "municipality": "目黒区・世田谷区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -5469,20 +5469,20 @@
         "東京地下鉄",
         "東日本旅客鉄道"
       ],
-      "municipality": "文京区",
+      "municipality": "千代田区・文京区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 1,
-        "moped": 0,
+        "bicycle": 93,
+        "moped": 2,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 1
+        "motorcycle": 4,
+        "total": 99
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 20,
-        "total": 20
+        "bicycle": 80,
+        "moped": 30,
+        "total": 110
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -5749,20 +5749,20 @@
       "operators": [
         "東京地下鉄"
       ],
-      "municipality": "渋谷区",
+      "municipality": "港区・渋谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 129,
-        "moped": 0,
+        "bicycle": 138,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 4,
-        "total": 133
+        "total": 143
       },
       "capacity": {
-        "bicycle": 50,
+        "bicycle": 245,
         "moped": 0,
-        "total": 50
+        "total": 245
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -6378,20 +6378,20 @@
         "東日本旅客鉄道",
         "西武鉄道"
       ],
-      "municipality": "豊島区",
+      "municipality": "新宿区・豊島区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 2,
-        "moped": 0,
+        "bicycle": 38,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 1,
-        "total": 3
+        "total": 40
       },
       "capacity": {
-        "bicycle": 60,
-        "moped": 0,
-        "total": 60
+        "bicycle": 1037,
+        "moped": 59,
+        "total": 1096
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -6925,7 +6925,7 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "国立市",
+      "municipality": "国分寺市・国立市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -6936,9 +6936,9 @@
         "total": 5
       },
       "capacity": {
-        "bicycle": 6939,
-        "moped": 58,
-        "total": 6997
+        "bicycle": 9839,
+        "moped": 158,
+        "total": 9997
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -6959,20 +6959,20 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "渋谷区",
+      "municipality": "新宿区・渋谷区",
       "designated": true,
       "group_label": "千駄ヶ谷駅、国立競技場駅",
       "counts": {
-        "bicycle": 29,
+        "bicycle": 30,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 29
+        "total": 30
       },
       "capacity": {
-        "bicycle": 174,
+        "bicycle": 183,
         "moped": 26,
-        "total": 200
+        "total": 209
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -7220,7 +7220,7 @@
       "operators": [
         "多摩都市モノレール"
       ],
-      "municipality": "武蔵村山市",
+      "municipality": "東大和市・武蔵村山市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -7231,9 +7231,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 516,
+        "moped": 2,
+        "total": 518
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -7254,7 +7254,7 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -7265,9 +7265,9 @@
         "total": 19
       },
       "capacity": {
-        "bicycle": 383,
-        "moped": 0,
-        "total": 383
+        "bicycle": 2042,
+        "moped": 20,
+        "total": 2062
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -7736,20 +7736,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "三鷹市",
+      "municipality": "武蔵野市・三鷹市",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 43,
+        "bicycle": 64,
         "moped": 3,
         "small_moped": 0,
         "motorcycle": 5,
-        "total": 51
+        "total": 72
       },
       "capacity": {
-        "bicycle": 7678,
-        "moped": 117,
-        "total": 7795
+        "bicycle": 15386,
+        "moped": 230,
+        "total": 15616
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -7770,7 +7770,7 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "三鷹市",
+      "municipality": "杉並区・三鷹市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -7944,20 +7944,20 @@
         "東京地下鉄",
         "東日本旅客鉄道"
       ],
-      "municipality": "新宿区",
+      "municipality": "千代田区・新宿区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 13,
+        "bicycle": 31,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 13
+        "total": 31
       },
       "capacity": {
-        "bicycle": 313,
-        "moped": 0,
-        "total": 313
+        "bicycle": 473,
+        "moped": 20,
+        "total": 493
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -8108,20 +8108,20 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "新宿区",
+      "municipality": "千代田区・新宿区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 4,
+        "bicycle": 55,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 4
+        "total": 55
       },
       "capacity": {
-        "bicycle": 88,
-        "moped": 0,
-        "total": 88
+        "bicycle": 173,
+        "moped": 10,
+        "total": 183
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -8374,20 +8374,20 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "世田谷区",
+      "municipality": "目黒区・世田谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 35,
-        "moped": 0,
+        "bicycle": 109,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 1,
-        "total": 36
+        "total": 111
       },
       "capacity": {
-        "bicycle": 435,
-        "moped": 24,
-        "total": 459
+        "bicycle": 1108,
+        "moped": 30,
+        "total": 1138
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -8890,7 +8890,7 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "清瀬市",
+      "municipality": "東村山市・清瀬市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -8901,9 +8901,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 829,
-        "moped": 60,
-        "total": 889
+        "bicycle": 1930,
+        "moped": 103,
+        "total": 2033
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -9168,15 +9168,15 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "渋谷区",
+      "municipality": "新宿区・渋谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 71,
+        "bicycle": 73,
         "moped": 2,
         "small_moped": 0,
         "motorcycle": 1,
-        "total": 74
+        "total": 76
       },
       "capacity": {
         "bicycle": 679,
@@ -9396,20 +9396,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "羽村市",
+      "municipality": "青梅市・羽村市",
       "designated": true,
       "group_label": null,
       "counts": {
         "bicycle": 1,
-        "moped": 0,
+        "moped": 1,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 1
+        "motorcycle": 1,
+        "total": 3
       },
       "capacity": {
-        "bicycle": 2097,
-        "moped": 130,
-        "total": 2227
+        "bicycle": 4020,
+        "moped": 246,
+        "total": 4266
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -9623,7 +9623,7 @@
         "東京地下鉄",
         "西武鉄道"
       ],
-      "municipality": "練馬区",
+      "municipality": "板橋区・練馬区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -9634,9 +9634,9 @@
         "total": 4
       },
       "capacity": {
-        "bicycle": 730,
-        "moped": 0,
-        "total": 730
+        "bicycle": 2044,
+        "moped": 17,
+        "total": 2061
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -10152,20 +10152,20 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "練馬区",
+      "municipality": "杉並区・練馬区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 8,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 0
+        "total": 8
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 529,
+        "moped": 12,
+        "total": 541
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -10379,7 +10379,7 @@
       "operators": [
         "多摩都市モノレール"
       ],
-      "municipality": "武蔵村山市",
+      "municipality": "東大和市・武蔵村山市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -10390,9 +10390,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 1391,
+        "moped": 56,
+        "total": 1447
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -10413,15 +10413,15 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 10,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 0
+        "motorcycle": 1,
+        "total": 11
       },
       "capacity": {
         "bicycle": 200,
@@ -11020,7 +11020,7 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "練馬区",
+      "municipality": "中野区・練馬区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -11031,9 +11031,9 @@
         "total": 5
       },
       "capacity": {
-        "bicycle": 186,
+        "bicycle": 486,
         "moped": 0,
-        "total": 186
+        "total": 486
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -11363,20 +11363,20 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "渋谷区",
+      "municipality": "新宿区・渋谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 7,
-        "moped": 3,
-        "small_moped": 0,
-        "motorcycle": 1,
-        "total": 11
+        "bicycle": 25,
+        "moped": 5,
+        "small_moped": 1,
+        "motorcycle": 3,
+        "total": 34
       },
       "capacity": {
-        "bicycle": 280,
-        "moped": 34,
-        "total": 314
+        "bicycle": 2421,
+        "moped": 156,
+        "total": 2577
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -11749,20 +11749,20 @@
       "operators": [
         "東京地下鉄"
       ],
-      "municipality": "豊島区",
+      "municipality": "文京区・豊島区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 11,
+        "bicycle": 15,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 1,
-        "total": 12
+        "motorcycle": 2,
+        "total": 17
       },
       "capacity": {
-        "bicycle": 146,
-        "moped": 0,
-        "total": 146
+        "bicycle": 236,
+        "moped": 1,
+        "total": 237
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -12084,15 +12084,15 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "江東区",
+      "municipality": "墨田区・江東区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 42,
+        "bicycle": 45,
         "moped": 2,
         "small_moped": 0,
         "motorcycle": 3,
-        "total": 47
+        "total": 50
       },
       "capacity": {
         "bicycle": 375,
@@ -12385,20 +12385,20 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "文京区",
+      "municipality": "千代田区・文京区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 12,
-        "moped": 0,
+        "bicycle": 120,
+        "moped": 6,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 12
+        "motorcycle": 3,
+        "total": 129
       },
       "capacity": {
-        "bicycle": 223,
-        "moped": 0,
-        "total": 223
+        "bicycle": 350,
+        "moped": 10,
+        "total": 360
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -13168,20 +13168,20 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "目黒区",
+      "municipality": "品川区・目黒区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 25,
+        "bicycle": 51,
         "moped": 1,
         "small_moped": 0,
         "motorcycle": 3,
-        "total": 29
+        "total": 55
       },
       "capacity": {
-        "bicycle": 100,
-        "moped": 0,
-        "total": 100
+        "bicycle": 685,
+        "moped": 66,
+        "total": 751
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -13305,20 +13305,20 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "渋谷区",
+      "municipality": "新宿区・渋谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 59,
+        "bicycle": 64,
         "moped": 3,
         "small_moped": 0,
         "motorcycle": 2,
-        "total": 64
+        "total": 69
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 261,
+        "moped": 5,
+        "total": 266
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -13411,20 +13411,20 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "北区",
+      "municipality": "豊島区・北区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 14,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 0
+        "total": 14
       },
       "capacity": {
-        "bicycle": 371,
+        "bicycle": 609,
         "moped": 0,
-        "total": 371
+        "total": 609
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -13896,20 +13896,20 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "昭島市",
+      "municipality": "立川市・昭島市",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 2,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 0
+        "total": 2
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 1712,
+        "moped": 31,
+        "total": 1743
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -13930,7 +13930,7 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "昭島市",
+      "municipality": "立川市・昭島市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -13941,9 +13941,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 288,
+        "bicycle": 633,
         "moped": 96,
-        "total": 384
+        "total": 729
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -15200,16 +15200,16 @@
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 127,
-        "moped": 2,
-        "small_moped": 0,
+        "bicycle": 249,
+        "moped": 15,
+        "small_moped": 1,
         "motorcycle": 1,
-        "total": 130
+        "total": 266
       },
       "capacity": {
-        "bicycle": 760,
+        "bicycle": 2209,
         "moped": 0,
-        "total": 760
+        "total": 2209
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -15427,16 +15427,16 @@
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 4,
+        "bicycle": 16,
         "moped": 1,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 5
+        "total": 17
       },
       "capacity": {
-        "bicycle": 17,
-        "moped": 0,
-        "total": 17
+        "bicycle": 168,
+        "moped": 8,
+        "total": 176
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -15459,7 +15459,7 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "豊島区",
+      "municipality": "文京区・豊島区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -16147,20 +16147,20 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 16,
         "moped": 1,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 1
+        "motorcycle": 2,
+        "total": 19
       },
       "capacity": {
-        "bicycle": 127,
+        "bicycle": 197,
         "moped": 25,
-        "total": 152
+        "total": 222
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -16288,7 +16288,7 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "大田区",
+      "municipality": "目黒区・大田区",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -16299,9 +16299,9 @@
         "total": 2
       },
       "capacity": {
-        "bicycle": 521,
-        "moped": 10,
-        "total": 531
+        "bicycle": 668,
+        "moped": 15,
+        "total": 683
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -16619,20 +16619,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "大田区",
+      "municipality": "品川区・大田区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 39,
-        "moped": 1,
+        "bicycle": 52,
+        "moped": 2,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 40
+        "total": 54
       },
       "capacity": {
-        "bicycle": 4700,
-        "moped": 46,
-        "total": 4746
+        "bicycle": 5830,
+        "moped": 72,
+        "total": 5902
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -16653,15 +16653,15 @@
       "operators": [
         "京浜急行電鉄"
       ],
-      "municipality": "大田区",
+      "municipality": "品川区・大田区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 26,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 0
+        "total": 26
       },
       "capacity": {
         "bicycle": 138,
@@ -16827,20 +16827,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "八王子市",
+      "municipality": "豊島区・八王子市",
       "designated": true,
       "group_label": "大塚・帝京大学駅",
       "counts": {
-        "bicycle": 3,
+        "bicycle": 50,
         "moped": 0,
-        "small_moped": 0,
-        "motorcycle": 0,
-        "total": 3
+        "small_moped": 1,
+        "motorcycle": 3,
+        "total": 54
       },
       "capacity": {
-        "bicycle": 547,
-        "moped": 0,
-        "total": 547
+        "bicycle": 2349,
+        "moped": 29,
+        "total": 2378
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -17282,20 +17282,20 @@
       "operators": [
         "東京地下鉄"
       ],
-      "municipality": "練馬区",
+      "municipality": "板橋区・練馬区",
       "designated": true,
       "group_label": "下赤塚駅・地下鉄赤塚駅",
       "counts": {
-        "bicycle": 3,
+        "bicycle": 29,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 3
+        "total": 29
       },
       "capacity": {
-        "bicycle": 1073,
-        "moped": 17,
-        "total": 1090
+        "bicycle": 2454,
+        "moped": 25,
+        "total": 2479
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -17384,20 +17384,20 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "世田谷区",
+      "municipality": "目黒区・世田谷区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 11,
-        "moped": 1,
+        "bicycle": 43,
+        "moped": 3,
         "small_moped": 0,
-        "motorcycle": 7,
-        "total": 19
+        "motorcycle": 8,
+        "total": 54
       },
       "capacity": {
-        "bicycle": 449,
-        "moped": 30,
-        "total": 479
+        "bicycle": 1067,
+        "moped": 74,
+        "total": 1141
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -17726,16 +17726,16 @@
       "designated": false,
       "group_label": "中央大学・明星大学駅",
       "counts": {
-        "bicycle": 1,
+        "bicycle": 2,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 1
+        "total": 2
       },
       "capacity": {
-        "bicycle": 136,
+        "bicycle": 272,
         "moped": 0,
-        "total": 136
+        "total": 272
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -18115,20 +18115,20 @@
       "operators": [
         "東京地下鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "中野区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 6,
-        "moped": 0,
+        "bicycle": 10,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 6
+        "total": 11
       },
       "capacity": {
-        "bicycle": 188,
+        "bicycle": 278,
         "moped": 0,
-        "total": 188
+        "total": 278
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -19389,20 +19389,20 @@
         "東日本旅客鉄道",
         "東海旅客鉄道"
       ],
-      "municipality": "中央区",
+      "municipality": "千代田区・中央区",
       "designated": true,
-      "group_label": null,
+      "group_label": "東京駅、大手町駅、二重橋駅",
       "counts": {
-        "bicycle": 4,
-        "moped": 0,
+        "bicycle": 151,
+        "moped": 4,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 4
+        "motorcycle": 11,
+        "total": 166
       },
       "capacity": {
-        "bicycle": 634,
-        "moped": 0,
-        "total": 634
+        "bicycle": 1734,
+        "moped": 26,
+        "total": 1760
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -20044,20 +20044,20 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "江戸川区",
+      "municipality": "江東区・江戸川区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 0,
+        "bicycle": 13,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 0
+        "total": 13
       },
       "capacity": {
-        "bicycle": 1200,
-        "moped": 12,
-        "total": 1212
+        "bicycle": 2533,
+        "moped": 37,
+        "total": 2570
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -20078,7 +20078,7 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "東大和市",
+      "municipality": "小平市・東大和市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -20089,9 +20089,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 2891,
-        "moped": 20,
-        "total": 2911
+        "bicycle": 3260,
+        "moped": 56,
+        "total": 3316
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -20397,20 +20397,20 @@
       "operators": [
         "東武鉄道"
       ],
-      "municipality": "練馬区",
+      "municipality": "板橋区・練馬区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 3,
+        "bicycle": 4,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 3
+        "total": 4
       },
       "capacity": {
-        "bicycle": 340,
-        "moped": 0,
-        "total": 340
+        "bicycle": 2745,
+        "moped": 158,
+        "total": 2903
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -20730,15 +20730,15 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "港区",
+      "municipality": "千代田区・港区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 5,
+        "bicycle": 30,
         "moped": 0,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 5
+        "motorcycle": 3,
+        "total": 33
       },
       "capacity": {
         "bicycle": 0,
@@ -21506,20 +21506,20 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "荒川区",
+      "municipality": "台東区・荒川区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 28,
+        "bicycle": 31,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 28
+        "total": 31
       },
       "capacity": {
-        "bicycle": 849,
+        "bicycle": 1099,
         "moped": 11,
-        "total": 860
+        "total": 1110
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -21844,7 +21844,7 @@
         "東日本旅客鉄道",
         "西武鉄道"
       ],
-      "municipality": "福生市",
+      "municipality": "昭島市・福生市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -21855,9 +21855,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 361,
-        "moped": 42,
-        "total": 403
+        "bicycle": 3281,
+        "moped": 152,
+        "total": 3433
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -22509,20 +22509,20 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 4,
+        "bicycle": 7,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 4
+        "total": 7
       },
       "capacity": {
-        "bicycle": 402,
-        "moped": 10,
-        "total": 412
+        "bicycle": 1515,
+        "moped": 41,
+        "total": 1556
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -22630,20 +22630,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "板橋区",
+      "municipality": "豊島区・北区・板橋区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 19,
+        "bicycle": 35,
         "moped": 2,
         "small_moped": 1,
         "motorcycle": 0,
-        "total": 22
+        "total": 38
       },
       "capacity": {
-        "bicycle": 761,
+        "bicycle": 1291,
         "moped": 26,
-        "total": 787
+        "total": 1317
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -22738,20 +22738,20 @@
         "東京都",
         "東日本旅客鉄道"
       ],
-      "municipality": "文京区",
+      "municipality": "千代田区・新宿区・文京区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 10,
-        "moped": 0,
+        "bicycle": 99,
+        "moped": 2,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 10
+        "motorcycle": 2,
+        "total": 103
       },
       "capacity": {
-        "bicycle": 110,
-        "moped": 9,
-        "total": 119
+        "bicycle": 588,
+        "moped": 39,
+        "total": 627
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23336,20 +23336,20 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "練馬区",
+      "municipality": "中野区・練馬区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 6,
-        "moped": 0,
+        "bicycle": 12,
+        "moped": 1,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 6
+        "total": 13
       },
       "capacity": {
-        "bicycle": 1245,
-        "moped": 40,
-        "total": 1285
+        "bicycle": 1311,
+        "moped": 42,
+        "total": 1353
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23507,20 +23507,20 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "板橋区",
+      "municipality": "北区・板橋区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 1,
-        "moped": 0,
+        "bicycle": 4,
+        "moped": 1,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 1
+        "motorcycle": 1,
+        "total": 6
       },
       "capacity": {
-        "bicycle": 1437,
-        "moped": 95,
-        "total": 1532
+        "bicycle": 2148,
+        "moped": 101,
+        "total": 2249
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23541,7 +23541,7 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "日の出町",
+      "municipality": "あきる野市・日の出町",
       "designated": false,
       "group_label": null,
       "counts": {
@@ -23552,9 +23552,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 1030,
+        "moped": 37,
+        "total": 1067
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23824,20 +23824,20 @@
       "operators": [
         "東急電鉄"
       ],
-      "municipality": "目黒区",
+      "municipality": "品川区・目黒区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 12,
-        "moped": 0,
-        "small_moped": 0,
-        "motorcycle": 1,
-        "total": 13
+        "bicycle": 123,
+        "moped": 3,
+        "small_moped": 2,
+        "motorcycle": 2,
+        "total": 130
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 804,
+        "moped": 18,
+        "total": 822
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23933,7 +23933,7 @@
       "operators": [
         "東日本旅客鉄道"
       ],
-      "municipality": "日の出町",
+      "municipality": "あきる野市・日の出町",
       "designated": false,
       "group_label": null,
       "counts": {
@@ -23944,9 +23944,9 @@
         "total": 0
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 613,
+        "moped": 39,
+        "total": 652
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -23967,7 +23967,7 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "東大和市",
+      "municipality": "東村山市・東大和市",
       "designated": true,
       "group_label": null,
       "counts": {
@@ -24448,20 +24448,20 @@
       "operators": [
         "西武鉄道"
       ],
-      "municipality": "西東京市",
+      "municipality": "練馬区・西東京市",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 1,
+        "bicycle": 2,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 1
+        "total": 2
       },
       "capacity": {
-        "bicycle": 6021,
-        "moped": 238,
-        "total": 6259
+        "bicycle": 9330,
+        "moped": 316,
+        "total": 9646
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -25656,20 +25656,20 @@
       "operators": [
         "京王電鉄"
       ],
-      "municipality": "杉並区",
+      "municipality": "世田谷区・杉並区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 1,
-        "moped": 0,
+        "bicycle": 15,
+        "moped": 1,
         "small_moped": 0,
-        "motorcycle": 0,
-        "total": 1
+        "motorcycle": 2,
+        "total": 18
       },
       "capacity": {
-        "bicycle": 499,
-        "moped": 0,
-        "total": 499
+        "bicycle": 1452,
+        "moped": 71,
+        "total": 1523
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -25764,20 +25764,20 @@
         "東急電鉄",
         "東日本旅客鉄道"
       ],
-      "municipality": "目黒区",
+      "municipality": "品川区・目黒区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 31,
-        "moped": 5,
-        "small_moped": 0,
-        "motorcycle": 0,
-        "total": 36
+        "bicycle": 108,
+        "moped": 6,
+        "small_moped": 2,
+        "motorcycle": 1,
+        "total": 117
       },
       "capacity": {
-        "bicycle": 0,
-        "moped": 0,
-        "total": 0
+        "bicycle": 324,
+        "moped": 78,
+        "total": 402
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -26326,20 +26326,20 @@
       "operators": [
         "東京地下鉄"
       ],
-      "municipality": "中野区",
+      "municipality": "新宿区・中野区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 4,
+        "bicycle": 14,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 4
+        "total": 14
       },
       "capacity": {
-        "bicycle": 181,
+        "bicycle": 295,
         "moped": 0,
-        "total": 181
+        "total": 295
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",
@@ -26360,20 +26360,20 @@
       "operators": [
         "東京都"
       ],
-      "municipality": "豊島区",
+      "municipality": "新宿区・豊島区",
       "designated": true,
       "group_label": null,
       "counts": {
-        "bicycle": 8,
+        "bicycle": 10,
         "moped": 0,
         "small_moped": 0,
         "motorcycle": 0,
-        "total": 8
+        "total": 10
       },
       "capacity": {
-        "bicycle": 559,
+        "bicycle": 599,
         "moped": 17,
-        "total": 576
+        "total": 616
       },
       "source": {
         "name": "東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」",

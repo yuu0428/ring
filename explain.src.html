@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring — 何を作り、どう作り、どう使うか</title>
+<meta name="description" content="自転車を停める前に、撤去されるかどうかを教えるサービス Ring の解説。東京都のオープンデータから、放置禁止区域の内か外かを判定します。">
+<style>
+:root{
+  --bg:#0E1116; --bg1:#151A21; --bg2:#1C232C; --bg3:#252E39;
+  --fg:#F2F5F8; --fg1:#B9C2CD; --fg2:#7D8794;
+  --danger:#FF3B3B; --warn:#FFB020; --likely:#FF8A3D; --safe:#22C08A;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.2);
+  --r:14px; --rl:22px;
+  --font:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic UI","Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);
+  font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--fg)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:88px 0 64px;
+  background:radial-gradient(1100px 520px at 50% -10%,rgba(255,59,59,.20),transparent 62%)}
+.hero::after{content:"";position:absolute;left:50%;top:-260px;width:760px;height:760px;
+  margin-left:-380px;border-radius:50%;border:1.5px solid rgba(255,59,59,.28);pointer-events:none}
+.hero::before{content:"";position:absolute;left:50%;top:-120px;width:480px;height:480px;
+  margin-left:-240px;border-radius:50%;border:1.5px dashed rgba(255,176,32,.26);pointer-events:none}
+.mark{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.22em;font-size:15px}
+h1{font-size:clamp(34px,7.4vw,60px);line-height:1.14;letter-spacing:-.02em;margin:22px 0 0;font-weight:800}
+h1 em{font-style:normal;color:var(--danger)}
+.lead{font-size:clamp(16px,2.4vw,19px);color:var(--fg1);margin:20px 0 0;max-width:34em}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:100px;
+  font-weight:700;font-size:15px;text-decoration:none;border:1px solid var(--line2);background:var(--bg2)}
+.btn.p{background:var(--danger);border-color:transparent;color:#fff}
+
+/* ---------- section ---------- */
+section{padding:56px 0;border-top:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--fg2);margin:0 0 10px}
+h2{font-size:clamp(24px,4.2vw,34px);line-height:1.28;margin:0 0 18px;letter-spacing:-.01em;font-weight:800}
+h3{font-size:18px;margin:32px 0 10px;font-weight:800}
+p{margin:0 0 16px;color:var(--fg1)}
+p.big{color:var(--fg);font-size:18px}
+strong{color:var(--fg)}
+mark{background:rgba(255,59,59,.18);color:#FFB4B4;padding:1px 5px;border-radius:4px}
+
+.grid{display:grid;gap:12px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--bg1);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.card h4{margin:0 0 6px;font-size:15px;font-weight:800}
+.card p{margin:0;font-size:14px}
+
+.stat{background:var(--bg1);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.stat b{display:block;font-size:clamp(26px,5vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:12.5px;color:var(--fg2)}
+
+.callout{border-radius:var(--r);padding:20px 22px;margin:22px 0;
+  border:1px solid rgba(255,59,59,.4);background:rgba(255,59,59,.08)}
+.callout.warn{border-color:rgba(255,176,32,.4);background:rgba(255,176,32,.08)}
+.callout.ok{border-color:rgba(34,192,138,.4);background:rgba(34,192,138,.08)}
+.callout p:last-child{margin:0}
+
+table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0 18px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--fg2);font-size:12px;font-weight:700;white-space:nowrap}
+td{color:var(--fg1)}
+td strong{color:var(--fg)}
+
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:0 0 22px 52px;border-left:1px solid var(--line);
+  margin-left:15px}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:-15px;top:0;width:30px;height:30px;
+  border-radius:50%;background:var(--bg3);border:1px solid var(--line2);
+  display:grid;place-items:center;font-size:13px;font-weight:800;color:var(--fg)}
+.steps h4{margin:2px 0 5px;font-size:16px;font-weight:800}
+.steps p{margin:0;font-size:14.5px}
+
+pre{background:#0A0D11;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;
+  overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.75;color:#C8D3DF;margin:0 0 18px}
+code{font-family:var(--mono);font-size:.9em;background:var(--bg2);padding:2px 6px;border-radius:5px;color:#E6C07B}
+pre code{background:none;padding:0;color:inherit}
+
+.shots{display:grid;gap:14px}
+@media(min-width:720px){.shots{grid-template-columns:repeat(3,1fr)}}
+figure{margin:0}
+figure img{border-radius:var(--r);border:1px solid var(--line)}
+figcaption{font-size:12.5px;color:var(--fg2);margin-top:8px}
+
+.levels{display:grid;gap:8px}
+.lv{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:var(--r);
+  background:var(--bg1);border:1px solid var(--line);border-left-width:4px}
+.lv b{font-size:15px;white-space:nowrap;min-width:9.5em}
+.lv span{font-size:13.5px;color:var(--fg1)}
+
+footer{padding:44px 0 72px;border-top:1px solid var(--line);color:var(--fg2);font-size:13px}
+footer a{color:var(--fg1)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.toc a{font-size:13px;color:var(--fg1);text-decoration:none;border:1px solid var(--line);
+  padding:6px 12px;border-radius:100px;background:var(--bg1)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5" fill="none" stroke="#FF3B3B" stroke-width="2.4"/>
+        <circle cx="12" cy="12" r="2" fill="#FF3B3B"/>
+      </svg>
+      RING
+    </div>
+    <h1>駅を囲む、<br><em>見えない輪。</em></h1>
+    <p class="lead">
+      その内側に自転車を停めると、警告のうえ即日撤去される。
+      けれど、その輪がどこにあるのかを知る手段は、どこにもなかった。
+    </p>
+    <p class="lead" style="margin-top:12px">
+      <strong>Ring は、いま自分が立っている場所が輪の内か外かを答えるブラウザアプリです。</strong>
+    </p>
+    <div class="cta">
+      <a class="btn p" href="https://yuu0428.github.io/ring/">アプリを開く</a>
+      <a class="btn" href="https://github.com/yuu0428/ring">GitHub リポジトリ</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="padding-top:26px">
+  <ul class="toc">
+    <li><a href="#why">なぜ作ったか</a></li>
+    <li><a href="#what">何ができるか</a></li>
+    <li><a href="#wall">ぶつかった壁</a></li>
+    <li><a href="#how">どう作ったか</a></li>
+    <li><a href="#judge">判定のしくみ</a></li>
+    <li><a href="#use">使い方</a></li>
+    <li><a href="#data">使ったデータ</a></li>
+    <li><a href="#honest">できないこと</a></li>
+  </ul>
+</div>
+
+<!-- ================================================== -->
+<section id="why">
+  <div class="wrap">
+    <p class="kicker">01 — なぜ作ったか</p>
+    <h2>「近くの駐輪場」を探すサービスはある。<br>Ring はその逆をやる。</h2>
+
+    <p class="big">
+      自転車を路上に停めてよいかどうかは、<strong>放置禁止区域の中か外か</strong>で決まります。
+      区域の中なら、警告のうえ即日撤去。取り戻すには自転車で 3,000 円前後、原付で 5,000 円前後かかり、
+      平日の昼間に保管所まで取りに行く時間が必要です。
+    </p>
+
+    <p>ところが、この区域がどこなのかを事前に知る手段が、事実上ありません。</p>
+
+    <div class="grid g3" style="margin:22px 0">
+      <div class="card">
+        <h4>境界が見えない</h4>
+        <p>区域の境界は道の途中にあります。こちら側は大丈夫でも、数メートル先はアウト。標識を見つけられなければ気づけません。</p>
+      </div>
+      <div class="card">
+        <h4>区ごとにバラバラ</h4>
+        <p>千代田区は案内図、渋谷区は PDF と地図システム、大田区は区域図。形式も見せ方も違い、横断して見る方法がありません。</p>
+      </div>
+      <div class="card">
+        <h4>しかも動く</h4>
+        <p>渋谷区は原宿・神宮前の区域を 2025 年 10 月に、渋谷駅周辺を 2026 年 4 月に拡大しました。昨日まで大丈夫だった場所が、今日から対象になります。</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>既存の駐輪場検索は「安全な場所のリスト」です。</strong>
+      リストに載っていない場所については、何も言えません。</p>
+      <p style="margin-top:12px">けれど実際に人が停めるのは —— 駐輪場が満車のとき、近くに駐輪場がないとき、5 分だけ停めたいとき。
+      <mark>つまりリストの外側です。</mark></p>
+      <p style="margin-top:12px"><strong>Ring は路上のどこを指しても答えを返します。</strong>これが唯一かつ最大の違いです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="what">
+  <div class="wrap">
+    <p class="kicker">02 — 何ができるか</p>
+    <h2>判定して終わりにしない。<br>行動が変わるところまで運ぶ。</h2>
+
+    <ol class="steps">
+      <li>
+        <h4>停めていいかの判定</h4>
+        <p>画面中央の十字が指す地点について、放置禁止区域の内か外かを 5 段階で答えます。地図を動かすと連続的に更新されるので、指を動かすだけで「どこから危ないのか」が体感できます。</p>
+      </li>
+      <li>
+        <h4>境界の警告</h4>
+        <p>「あと 12m で撤去対象」——判定点から最も近い境界まで線を引き、距離をメートルで表示します。境界は目に見えないので、ここが一番危ない。</p>
+      </li>
+      <li>
+        <h4>代替の提示</h4>
+        <p>撤去対象だった場合、近くの駐輪場を距離順に提示します。収容台数・料金・利用時間つき。「停めるな」だけでは行動は変わりません。</p>
+      </li>
+      <li>
+        <h4>区域変更のお知らせ</h4>
+        <p>施行前の拡大予定と、最近施行された変更を伝えます。「いつも停めている場所が来月から対象になる」は、現地の標識では気づけません。</p>
+      </li>
+      <li>
+        <h4>撤去された後の案内</h4>
+        <p>どの保管所に行けばよいか、開いている曜日と時間、必要な持ち物。<strong>今日は開いているか</strong>も端末の時計から判定します。</p>
+      </li>
+      <li>
+        <h4>根拠の開示</h4>
+        <p>すべての判定に、出典名・出典 URL・最終確認日・データの精度区分を添えます。根拠を示せないデータは画面に出しません。</p>
+      </li>
+    </ol>
+
+    <div class="shots" style="margin-top:34px">
+      <figure>
+        <img src="{{IMG:01-verdict}}" alt="東京駅で「撤去される可能性が高い」と判定された画面。赤い輪が地図に描かれている">
+        <figcaption>赤い輪が放置禁止区域。中央の十字が判定点。</figcaption>
+      </figure>
+      <figure>
+        <img src="{{IMG:03-after-pan}}" alt="区域の外へ移動して「撤去対象ではありません」と表示された画面">
+        <figcaption>区域の外へ出ると判定が変わる。境界まで線が引かれる。</figcaption>
+      </figure>
+      <figure>
+        <img src="{{IMG:02-evidence}}" alt="判定の根拠・近くの駐輪場・保管所が並んだ画面">
+        <figcaption>カードを引き上げると、代替と根拠が出てくる。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="wall">
+  <div class="wrap">
+    <p class="kicker">03 — ぶつかった壁</p>
+    <h2>放置禁止区域のデータは、<br><em>どこにも公開されていなかった。</em></h2>
+
+    <p class="big">
+      作りはじめて最初にやったのは、区域データを探すことでした。結果は次のとおりです。
+    </p>
+
+    <div class="scroll">
+    <table>
+      <tr><th>調べたもの</th><th>結果</th></tr>
+      <tr>
+        <td><strong>東京都オープンデータカタログサイト</strong><br>全文検索</td>
+        <td>「禁止区域」に該当する 125 件を確認。<mark>自転車の放置禁止区域は 0 件。</mark></td>
+      </tr>
+      <tr>
+        <td><strong>杉並区「自転車放置禁止区域」</strong><br>カタログに唯一登録されていた CSV</td>
+        <td>登録 URL が <mark>404</mark>。すぎナビ（区の地図システム）ごと到達不能。</td>
+      </tr>
+      <tr>
+        <td><strong>千代田区・文京区・港区</strong><br>公式ページ</td>
+        <td>区域は<mark>駅ごとの地図画像（JPG / PNG）</mark>としてのみ公開。町丁目や街路名による文章記述は無し。</td>
+      </tr>
+      <tr>
+        <td><strong>条例・施行規則の別表</strong></td>
+        <td>境界を文章で定義した別表は見つからず。</td>
+      </tr>
+    </table>
+    </div>
+
+    <div class="callout">
+      <p><strong>区は地図を持っているのに、機械が読める形では出していない。</strong>
+      これが本企画最大の障害であり、同時に企画の中身でもあります。</p>
+    </div>
+
+    <h3>そこで、都の Excel に埋もれていた公式フラグを掘り起こした</h3>
+
+    <p>
+      東京都都民安全総合対策本部が毎年公表している
+      <strong>「駅別放置自転車の状況（令和 7 年度）」</strong>の Excel を開いたところ、
+      駅名の隣に <code>＊</code> の列がありました。凡例にはこう書かれています。
+    </p>
+
+    <pre><code>（注）＊印がある駅周辺には自転車等駐車場が整備され、
+      放置禁止区域が指定されている。</code></pre>
+
+    <p>
+      これは、<strong>全都 53 自治体・663 行・702 駅を網羅する、唯一の公式かつ機械可読な指定情報</strong>でした。
+      区域の「形」は分からなくても、<mark>どの駅に区域があるのか</mark>は、これで全都分わかります。
+    </p>
+
+    <div class="grid g3" style="margin:22px 0">
+      <div class="stat"><b>519</b><span>放置禁止区域の指定がある駅</span></div>
+      <div class="stat"><b>99.9%</b><span>都Excel × 国土数値情報の駅名突合率<br>（702 駅中 701 駅）</span></div>
+      <div class="stat"><b>0</b><span>公開されている区域ポリゴン</span></div>
+    </div>
+
+    <p>
+      この発見によって、Ring は「代表的な区だけのデモ」ではなく
+      <strong>東京全域で答えが返るサービス</strong>になりました。
+    </p>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="how">
+  <div class="wrap">
+    <p class="kicker">04 — どう作ったか</p>
+    <h2>区域データを 2 階層で持つ</h2>
+
+    <p>
+      精度の異なるデータを 1 つの箱に混ぜると、どこまで信じてよいか分からなくなります。
+      Ring は区域を <strong>Tier A / Tier B</strong> に分け、精度をデータそのものに持たせました。
+    </p>
+
+    <div class="grid g2" style="margin:20px 0">
+      <div class="card" style="border-color:rgba(255,59,59,.35)">
+        <h4>Tier A — 区域ポリゴン</h4>
+        <p>区の公式区域図から作図した多角形。精度は <code>traced</code>（図をトレース）または <code>described</code>（公開文書から作図）。
+        <br><br><strong>現在 0 件。</strong>各区が区域を画像でしか公開しておらず、作図元となる公開データが存在しないためです。
+        データ形式と取り込み口は実装済みで、公開され次第そのまま載ります。</p>
+      </div>
+      <div class="card" style="border-color:rgba(255,138,61,.35)">
+        <h4>Tier B — 駅指定リング</h4>
+        <p>都 Excel の指定フラグ＋駅座標から生成する円。精度は <code>estimated</code>（推定）。
+        <br><br><strong>現在 519 件で全都を覆います。</strong>半径は固定値ではなく、
+        その駅の乗入台数（放置台数＋実収容台数）から算出しています。</p>
+      </div>
+    </div>
+
+    <h3>リングの半径を、駅の規模から決める</h3>
+    <p>
+      秋葉原と小さな駅を同じ円で塗るのは実態から遠い。そこで都 Excel から得られる乗入台数を使いました。
+    </p>
+    <pre><code>r = clamp(100 + 3.0 × √(乗入台数), 120m, 400m)</code></pre>
+    <p>
+      結果、半径は 120〜400m に分布し、中央値は 181m。
+      各区が公開する区域図がおおむね駅から 120〜400m の範囲を指定していることに合わせています。
+      <strong>これは推定であり、実測ではありません。</strong>アプリはそのことを毎回画面に明記します。
+    </p>
+
+    <h3>技術構成</h3>
+    <div class="scroll">
+    <table>
+      <tr><th>領域</th><th>採用</th><th>理由</th></tr>
+      <tr><td>ビルド</td><td><strong>Vite 7 + TypeScript(strict)</strong></td><td>静的サイトとして出力でき GitHub Pages に直接載る。判定ロジックの型安全に strict は必須</td></tr>
+      <tr><td>UI</td><td><strong>React 19</strong></td><td>判定状態 → 画面の対応を宣言的に書ける。ボトムシートの状態遷移が多く手続き的 DOM 操作では破綻する</td></tr>
+      <tr><td>地図</td><td><strong>MapLibre GL JS v5</strong></td><td>OSS でライセンス制約がない。<code>raster-*</code> paint で基図の色調をコード側から制御でき、独自の視覚言語を作れる</td></tr>
+      <tr><td>基図</td><td><strong>地理院タイル（淡色）</strong></td><td>国土地理院の公式タイル。API キー不要・無償・日本の道路形状が最も正確</td></tr>
+      <tr><td>地理演算</td><td><strong>Turf.js</strong></td><td>点-多角形の内外判定、最近傍境界点、距離。判定はこのアプリの生命線なので自前実装しない</td></tr>
+      <tr><td>ETL</td><td><strong>Node + TypeScript</strong></td><td>アプリと型を共有できる。CP932 の CSV と xlsx を扱う必要がある</td></tr>
+      <tr><td>配信</td><td><strong>GitHub Actions → Pages</strong></td><td>無償・永続・リポジトリと一体。サーバ機能が皆無なので他は不要</td></tr>
+    </table>
+    </div>
+
+    <div class="callout ok">
+      <p><strong>Google Maps を使いませんでした。</strong>
+      静的サイトなので API キーが必ずクライアントに露出し、公開リポジトリでは課金事故につながります。
+      また Google Maps はタイルのキャッシュを規約で禁じており、<strong>オフライン動作という要件と両立しません</strong>。
+      路上で電波が弱い場面こそ使われるアプリなので、ここは譲れませんでした。</p>
+    </div>
+
+    <h3>サーバを持たない</h3>
+    <p>
+      判定に必要なデータは全東京分でも数 MB。サーバを持たないことで、
+      <strong>位置座標が一切外部に出ず</strong>、通信が切れても動き、運用コストがゼロで、放置しても壊れません。
+      判定は純粋関数であり、サーバに置く理由がありませんでした。
+    </p>
+
+    <h3>ETL の出力はリポジトリにコミットする</h3>
+    <p>
+      調査中、複数の公式 URL が 404・ホスト移転・アクセス拒否を返しました。
+      ビルド時に外部から取得する設計にすると、<strong>区のサイトの都合でこちらのサイトが壊れます。</strong>
+      そこで取得結果を JSON にしてリポジトリに置き、CI はそれをビルドするだけにしています。
+    </p>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="judge">
+  <div class="wrap">
+    <p class="kicker">05 — 判定のしくみ</p>
+    <h2>精度の高いデータが、常に勝つ</h2>
+
+    <pre><code>judge(地点) →
+
+  STEP 0  施行前の区域の中か        → 「◯月◯日から対象になります」を添える
+  STEP 1  Tier A の内側か           → inside
+  STEP 2  Tier A の境界から 30m 以内 → near
+  STEP 3  Tier B のリングの内側か    → likely（推定）
+          ※ Tier A が覆う駅では Tier B を使わない
+  STEP 4  それ以外                  → outside / 都外なら unknown</code></pre>
+
+    <p>
+      <strong>STEP 3 の除外規則が最も重要です。</strong>
+      Tier A のポリゴンで精密に「外」と判定した地点を、Tier B の粗い円で「内かも」と塗り潰してはいけません。
+    </p>
+
+    <h3>5 つの判定</h3>
+    <div class="levels">
+      <div class="lv" style="border-left-color:var(--danger)">
+        <b style="color:var(--danger)">ここは撤去対象です</b>
+        <span>作図された区域の内側。警告のうえ即日撤去されることがあります。</span>
+      </div>
+      <div class="lv" style="border-left-color:var(--warn)">
+        <b style="color:var(--warn)">あと◯mで撤去対象</b>
+        <span>区域のすぐ外側（30m 以内）。境界には目印がないため、少し進むだけで対象になります。</span>
+      </div>
+      <div class="lv" style="border-left-color:var(--likely)">
+        <b style="color:var(--likely)">撤去される可能性が高い</b>
+        <span>指定駅の推定リングの内側。<strong>「推定」と明示</strong>し、事実として断定しません。</span>
+      </div>
+      <div class="lv" style="border-left-color:var(--safe)">
+        <b style="color:var(--safe)">撤去対象ではありません</b>
+        <span>区域外。ただし「歩行者の通行を妨げる場所や私有地には停められません」を必ず併記します。</span>
+      </div>
+      <div class="lv" style="border-left-color:var(--fg2)">
+        <b style="color:var(--fg2)">ここは判定できません</b>
+        <span>データが無い場所。<strong>「停めてよい」とは決して言いません。</strong></span>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:24px">
+      <p><strong>判定できないことは失敗ではありません。判定できないのに答えることが失敗です。</strong></p>
+      <p style="margin-top:10px">
+        このアプリは「撤去されるか」を答えます。データの無い場所で「大丈夫」と言えば、
+        ユーザーは実際に損害を受けます。だから <code>unknown</code> という状態を明示的に持っています。
+      </p>
+    </div>
+
+    <h3>判定エンジンはテストで守る</h3>
+    <p>
+      判定は UI に一切依存しない純粋関数として実装し、境界ケースを 18 件のテストで固定しています。
+      「ポリゴンの穴の中を内側と誤判定しないか」「Tier A の覆域で Tier B に落ちないか」
+      「すべての判定に出典が付いているか」——ここが壊れるとアプリの存在意義が消えるためです。
+    </p>
+
+    <h3>「動きました」を証拠なしに言わない</h3>
+    <p>
+      実装とは別に、実ブラウザをスマホ幅（390×844）で自動操作する検証スクリプトを用意しました。
+      判定の表示、区域が<strong>実際に地図へ描画されているか</strong>、横スクロールの有無、
+      連続パン・空入力・1000 文字入力への耐性、位置情報を拒否した場合、オフライン時、コンソールエラー——
+      <strong>20 項目を毎回実際に操作して確認</strong>し、スクリーンショットを残しています。
+    </p>
+    <div class="callout ok">
+      <p>この検証は実際に役立ちました。判定は正しいのに<strong>区域が地図に一度も描画されていない</strong>不具合を見つけています
+      （MapLibre の <code>isStyleLoaded()</code> がレイヤ追加より先に <code>true</code> になり、
+      データが黙って捨てられていた）。判定ロジックのテストだけでは絶対に見つかりませんでした。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="use">
+  <div class="wrap">
+    <p class="kicker">06 — 使い方</p>
+    <h2>開いて、合わせるだけ</h2>
+
+    <ol class="steps">
+      <li>
+        <h4>アプリを開く</h4>
+        <p><a href="https://yuu0428.github.io/ring/">yuu0428.github.io/ring</a> をスマートフォンのブラウザで開きます。インストールは不要です。位置情報を許可すると現在地へ移動します。</p>
+      </li>
+      <li>
+        <h4>停めたい場所に十字を合わせる</h4>
+        <p>タップではなく、<strong>地図を動かして中央の十字を合わせます。</strong>動かしている間ずっと判定が更新されるので、境界の位置が指先で分かります。</p>
+      </li>
+      <li>
+        <h4>カードを引き上げる</h4>
+        <p>下のカードを上へドラッグすると、近くの駐輪場・保管所・判定の根拠が出てきます。</p>
+      </li>
+      <li>
+        <h4>位置情報を許可しなくても使える</h4>
+        <p>拒否した場合は東京駅から始まります。検索（🔍）から駅名を入れれば、どこでも調べられます。検索は端末の中だけで動き、通信しません。</p>
+      </li>
+      <li>
+        <h4>電波がなくても動く</h4>
+        <p>一度開いたあとは、機内モードでも判定・駐輪場・保管所が動きます。地図タイルは取得済みの範囲だけ表示されます。</p>
+      </li>
+    </ol>
+
+    <div class="shots" style="margin-top:30px">
+      <figure>
+        <img src="{{IMG:04-search}}" alt="駅名で検索している画面">
+        <figcaption>端末内検索。放置禁止区域がある駅には印が付く。</figcaption>
+      </figure>
+      <figure>
+        <img src="{{IMG:06-changes}}" alt="区域変更のお知らせ一覧">
+        <figcaption>区域変更のお知らせ。施行日と区の告知へのリンク。</figcaption>
+      </figure>
+      <figure>
+        <img src="{{IMG:08-request}}" alt="オープンデータ公開リクエストの文面生成画面">
+        <figcaption>区への公開リクエスト文面を生成できる。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="data">
+  <div class="wrap">
+    <p class="kicker">07 — 使ったオープンデータ</p>
+    <h2>すべて公開データで動いています</h2>
+
+    <div class="scroll">
+    <table>
+      <tr><th>データ</th><th>提供元</th><th>用途</th></tr>
+      <tr><td><strong>駅別放置自転車の状況（令和7年度）</strong></td><td>東京都都民安全総合対策本部</td><td><strong>放置禁止区域の指定有無</strong>・放置台数・収容能力</td></tr>
+      <tr><td><strong>国土数値情報 N02 鉄道データ（2024）</strong></td><td>国土交通省</td><td>駅の座標・路線名・事業者名</td></tr>
+      <tr><td>自転車駐車場</td><td>文京区</td><td>駐輪場の位置・収容台数</td></tr>
+      <tr><td>区営／民間自転車駐輪場</td><td>品川区</td><td>駐輪場の位置・料金</td></tr>
+      <tr><td>自転車等駐輪場一覧</td><td>目黒区</td><td>駐輪場の位置・料金・利用時間</td></tr>
+      <tr><td>区営自転車駐車場設置箇所</td><td>中野区</td><td>駐輪場の位置・料金・利用時間</td></tr>
+      <tr><td>区営二輪車駐車場一覧</td><td>中央区</td><td>二輪車駐車場の位置・料金</td></tr>
+      <tr><td><strong>保管所一覧</strong></td><td>大田区</td><td><strong>撤去駅と保管所の対応</strong>・開所時間</td></tr>
+      <tr><td><strong>区営自転車保管場所設置箇所</strong></td><td>中野区</td><td>撤去区域と保管所の対応・開所時間</td></tr>
+      <tr><td>駅前放置自転車撤去情報（各駅ごと）</td><td>品川区</td><td>駅別の放置実績</td></tr>
+      <tr><td>自転車シェアリングポート</td><td>目黒区 / 港区</td><td>代替手段</td></tr>
+      <tr><td>地理院タイル（淡色地図）</td><td>国土地理院</td><td>地図の基図</td></tr>
+    </table>
+    </div>
+
+    <p>
+      ライセンスは各提供元の規約（東京都オープンデータカタログ由来は CC BY 4.0 相当、
+      国土数値情報は利用約款、地理院タイルは出典明記で利用可）に従っています。
+      アプリ内の「データについて」画面と <code>docs/DATA.md</code> でも確認できます。
+    </p>
+
+    <h3>そして、データを返す</h3>
+    <p>
+      Ring が生成した区域データ（GeoJSON）は CC BY 4.0 で公開しています。
+      さらにアプリの中に <strong>「区に、区域データの公開をお願いする」</strong>機能を入れました。
+      区を選ぶと、現在の公開形式・求める形式・理由・想定される公益を書いた依頼文面が生成され、コピーできます。
+      送信はしません。<strong>送るのは人の行為として残しています。</strong>
+    </p>
+    <div class="callout">
+      <p>区域データが公開されれば、Ring は推定ではなく<strong>正確な境界</strong>で答えられるようになります。
+      それがこのプロジェクトのゴールです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<section id="honest">
+  <div class="wrap">
+    <p class="kicker">08 — できないこと</p>
+    <h2>正直に書いておきます</h2>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>区域の「形」は分かりません</h4>
+        <p>現在の判定はすべて推定リングによるものです。実際の境界は多角形で、円ではありません。アプリは判定のたびに「推定」と表示します。</p>
+      </div>
+      <div class="card">
+        <h4>駐輪場データは全区分ではありません</h4>
+        <p>オープンデータを公開している区が限られているため、159 件（6 区）にとどまります。0 件のときは「持っていない」と正直に表示します。</p>
+      </div>
+      <div class="card">
+        <h4>保管所データは 2 区分だけです</h4>
+        <p>大田区と中野区のみ。ほかの区は区の公式ページへ誘導します。空振りで終わらせないためです。</p>
+      </div>
+      <div class="card">
+        <h4>区域変更は人力で追っています</h4>
+        <p>オープンデータが無いため、区の告知を人が確認して記録しています。抜けがある可能性があります。</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:26px">
+      <p style="font-size:17px"><strong>Ring が示すのは参考情報です。<br>
+      最終的な判断は、必ず現地の標識で行ってください。</strong></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="color:var(--fg1);font-size:15px;margin-bottom:18px">
+      <strong>Ring</strong> — 駅を囲む、見えない輪。
+    </p>
+    <p>
+      アプリ：<a href="https://yuu0428.github.io/ring/">yuu0428.github.io/ring</a><br>
+      ソースコードと仕様書：<a href="https://github.com/yuu0428/ring">github.com/yuu0428/ring</a><br>
+      コード MIT ライセンス ／ 生成した区域データ CC BY 4.0
+    </p>
+    <p style="margin-top:18px;font-size:12px">
+      出典：東京都都民安全総合対策本部「駅別放置自転車の状況（令和7年度）」、国土交通省「国土数値情報（鉄道データ）」、
+      文京区・品川区・目黒区・中野区・中央区・大田区・港区の各オープンデータ、国土地理院「地理院タイル」
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

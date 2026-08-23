@@ -298,25 +298,31 @@ td strong{color:var(--fg)}
 <!-- 10 技術 -->
 <div class="slide dense">
   <div class="kicker">技術構成</div>
-  <h2>サーバを持たない静的アプリ</h2>
+  <h2>難しいのは地図ではなく、<em>判定の速さと誠実さ</em></h2>
   <table>
-    <tr><th>領域</th><th>採用</th><th>理由</th></tr>
-    <tr><td>ビルド</td><td><strong>Vite 7 + TypeScript(strict)</strong></td><td>静的出力でPagesに直接載る。判定の型安全にstrictは必須</td></tr>
-    <tr><td>UI</td><td><strong>React 19</strong></td><td>判定状態→画面の対応を宣言的に書ける</td></tr>
-    <tr><td>地図</td><td><strong>MapLibre GL JS + 地理院タイル</strong></td><td>APIキー不要・無償。paintで基図の色調を制御でき独自の視覚言語を作れる</td></tr>
-    <tr><td>地理演算</td><td><strong>Turf.js</strong></td><td>点-多角形判定・最近傍境界点。判定は生命線なので自前実装しない</td></tr>
-    <tr><td>配信</td><td><strong>GitHub Actions → Pages</strong></td><td>無償・永続・リポジトリと一体</td></tr>
+    <tr><th>領域</th><th>採用</th><th>この問題で必要だった理由</th></tr>
+    <tr><td>判定</td><td><strong>Turf.js ＋ 自前の絞り込み層</strong></td>
+        <td>区域519件に対し地図を動かすたび点-多角形判定と最近傍境界点を計算する。bbox粗選別とWeakMapキャッシュで包み、rAFで1フレーム1回に間引いて移動中も判定が途切れない</td></tr>
+    <tr><td>設計</td><td><strong>判定エンジンを純粋関数に分離</strong></td>
+        <td>UIに一切依存させず、穴あきポリゴン・施行日境界・Tier優先など18件のテストで固定。判定の正しさと描画の不具合を切り分けられる</td></tr>
+    <tr><td>地図</td><td><strong>MapLibre GL JS</strong></td>
+        <td>raster paint で基図の色調をコード側から制御でき、<strong>境界線だけを主役にする</strong>描画を作れる。この作品の見せ場そのもの</td></tr>
+    <tr><td>基図</td><td><strong>地理院タイル</strong></td>
+        <td>区域の境界は道の途中にある。日本の道路形状が最も正確な基図でないと、判定の説得力が成立しない</td></tr>
+    <tr><td>型</td><td><strong>TypeScript (strict)</strong></td>
+        <td>区域・駅・判定結果の型を ETL とアプリで共有。精度区分の取り違えをコンパイル時に落とす</td></tr>
+    <tr><td>データ</td><td><strong>ETL 出力をリポジトリに固定</strong></td>
+        <td>調査中に公式データの URL が404・ホスト移転・アクセス拒否を返した。外部取得をビルドから切り離し、区のサイト都合でこちらが壊れないようにした</td></tr>
   </table>
   <div class="tags">
-    <span class="tag">位置座標を外部に送らない</span>
-    <span class="tag">オフラインで動く（PWA）</span>
-    <span class="tag">APIキー不要・課金ゼロ</span>
-    <span class="tag">判定エンジンは純粋関数＋18件のテスト</span>
+    <span class="tag">位置座標は端末外に出ない</span>
+    <span class="tag">オフラインで判定が続く</span>
+    <span class="tag">判定テスト18件</span>
     <span class="tag">実ブラウザ自動検証20項目</span>
   </div>
-  <p style="margin-top:20px;font-size:21px;max-width:none">
-    <strong>Google Maps を使わなかった理由：</strong>静的サイトではAPIキーが必ず露出し課金事故につながる。
-    さらにタイルのキャッシュが規約で禁じられており、路上で使うための<strong>オフライン動作と両立しない</strong>。
+  <p style="margin-top:16px;font-size:20px;max-width:none;line-height:1.6">
+    <strong>一番難しかったのは速度ではなく「わからない」の設計。</strong>
+    5段階に likely（推定）と unknown を持たせ、データの精度差を嘘なく伝えられるようにした。
   </p>
   <div class="brandmini">RING</div><div class="no">10</div>
 </div>

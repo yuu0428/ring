@@ -337,32 +337,45 @@ footer a{color:var(--fg1)}
       <strong>これは推定であり、実測ではありません。</strong>アプリはそのことを毎回画面に明記します。
     </p>
 
-    <h3>技術構成</h3>
+    <h3>技術構成 —— この問題の何が難しいか</h3>
+    <p>
+      「地図に区域を出す」だけなら難しくありません。難しいのは
+      <strong>地図を動かすたびに、任意の 1 点を 519 件の区域に対して判定し続けること</strong>と、
+      <strong>データの精度差を利用者に嘘をつかずに伝えること</strong>の 2 つでした。
+    </p>
     <div class="scroll">
     <table>
-      <tr><th>領域</th><th>採用</th><th>理由</th></tr>
-      <tr><td>ビルド</td><td><strong>Vite 7 + TypeScript(strict)</strong></td><td>静的サイトとして出力でき GitHub Pages に直接載る。判定ロジックの型安全に strict は必須</td></tr>
-      <tr><td>UI</td><td><strong>React 19</strong></td><td>判定状態 → 画面の対応を宣言的に書ける。ボトムシートの状態遷移が多く手続き的 DOM 操作では破綻する</td></tr>
-      <tr><td>地図</td><td><strong>MapLibre GL JS v5</strong></td><td>OSS でライセンス制約がない。<code>raster-*</code> paint で基図の色調をコード側から制御でき、独自の視覚言語を作れる</td></tr>
-      <tr><td>基図</td><td><strong>地理院タイル（淡色）</strong></td><td>国土地理院の公式タイル。API キー不要・無償・日本の道路形状が最も正確</td></tr>
-      <tr><td>地理演算</td><td><strong>Turf.js</strong></td><td>点-多角形の内外判定、最近傍境界点、距離。判定はこのアプリの生命線なので自前実装しない</td></tr>
-      <tr><td>ETL</td><td><strong>Node + TypeScript</strong></td><td>アプリと型を共有できる。CP932 の CSV と xlsx を扱う必要がある</td></tr>
-      <tr><td>配信</td><td><strong>GitHub Actions → Pages</strong></td><td>無償・永続・リポジトリと一体。サーバ機能が皆無なので他は不要</td></tr>
+      <tr><th>領域</th><th>採用</th><th>この問題で必要だった理由</th></tr>
+      <tr><td>判定</td><td><strong>Turf.js ＋ 自前の絞り込み層</strong></td>
+          <td>点-多角形判定と最近傍境界点を毎フレーム計算する。全件に Haversine を回すと確実に重くなるため、bbox による粗選別と、区域ごとの bbox・境界線の <code>WeakMap</code> キャッシュで包み、<code>requestAnimationFrame</code> で 1 フレーム 1 回に間引いた</td></tr>
+      <tr><td>設計</td><td><strong>判定エンジンを純粋関数に分離</strong></td>
+          <td>UI に一切依存させない。穴あきポリゴン・施行日境界・Tier 優先など 18 件のテストで固定し、判定の正しさと描画の不具合を切り分けられるようにした</td></tr>
+      <tr><td>地図</td><td><strong>MapLibre GL JS v5</strong></td>
+          <td><code>raster-*</code> の paint プロパティで基図の色調をコード側から制御でき、<strong>境界線だけを主役にする</strong>描画を作れる。CSS filter では上に乗せる区域や線まで着色されてしまう</td></tr>
+      <tr><td>基図</td><td><strong>地理院タイル（淡色地図）</strong></td>
+          <td>区域の境界は道の途中にある。日本の道路形状が最も正確な基図でなければ、「あと 12m」という表示の説得力が成立しない</td></tr>
+      <tr><td>型</td><td><strong>TypeScript (strict)</strong></td>
+          <td>区域・駅・判定結果の型を ETL とアプリで共有する。<code>traced</code> / <code>described</code> / <code>estimated</code> の取り違えはユーザーへの嘘に直結するので、コンパイル時に落とす</td></tr>
+      <tr><td>UI</td><td><strong>React 19</strong></td>
+          <td>判定状態 → 画面の対応を宣言的に書く。地図移動のたびに変わる状態を手続き的な DOM 操作で扱うと破綻する</td></tr>
+      <tr><td>データ</td><td><strong>ETL 出力をリポジトリに固定</strong></td>
+          <td>調査中に公式データの URL が 404・ホスト移転・アクセス拒否を返した。外部取得をビルドから切り離し、区のサイトの都合でこちらが壊れないようにした</td></tr>
     </table>
     </div>
 
     <div class="callout ok">
-      <p><strong>Google Maps を使いませんでした。</strong>
-      静的サイトなので API キーが必ずクライアントに露出し、公開リポジトリでは課金事故につながります。
-      また Google Maps はタイルのキャッシュを規約で禁じており、<strong>オフライン動作という要件と両立しません</strong>。
-      路上で電波が弱い場面こそ使われるアプリなので、ここは譲れませんでした。</p>
+      <p><strong>一番難しかったのは速度ではなく「わからない」の設計でした。</strong>
+      判定に <code>likely</code>（推定）と <code>unknown</code> を持たせたことで、
+      データの精度差を利用者に嘘をつかずに渡せるようになりました。
+      技術選定はすべて、この 2 つを成立させるためのものです。</p>
     </div>
 
     <h3>サーバを持たない</h3>
     <p>
-      判定に必要なデータは全東京分でも数 MB。サーバを持たないことで、
-      <strong>位置座標が一切外部に出ず</strong>、通信が切れても動き、運用コストがゼロで、放置しても壊れません。
-      判定は純粋関数であり、サーバに置く理由がありませんでした。
+      判定は純粋関数で、必要なデータは全東京分でも数 MB です。サーバに置く理由がありません。
+      端末内で完結させたことで、<strong>位置座標が一切外部に出ない</strong>ことと、
+      <strong>電波が弱い路上でも判定が続く</strong>ことが、運用の努力ではなく
+      <strong>構造として保証</strong>されます。このアプリが使われるのは、まさにその状況です。
     </p>
 
     <h3>ETL の出力はリポジトリにコミットする</h3>

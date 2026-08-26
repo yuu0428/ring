@@ -53,7 +53,8 @@ async function main(): Promise<void> {
   writeFileSync(tmpHtml, html, 'utf8');
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: W, height: H } });
+  // PowerPoint に貼るので 2 倍解像度で描く（1600×900 だと録画時に少し眠くなる）
+  const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 2 });
   await page.goto(`file://${tmpHtml}`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(400);

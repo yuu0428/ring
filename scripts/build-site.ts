@@ -242,10 +242,6 @@ dl.qa dd a{color:#8FC3FF;word-break:break-all}
         <span class="ico">🗺️</span>
         <span><b>アプリを開く</b><span>ring-5oq.pages.dev ／ スマホのブラウザでそのまま動きます</span></span>
       </a>
-      <a class="hub-card" href="https://github.com/yuu0428/ring" target="_blank" rel="noopener">
-        <span class="ico">📦</span>
-        <span><b>ソースコードと仕様書</b><span>github.com/yuu0428/ring ／ spec.md・決定台帳・実装状況</span></span>
-      </a>
       <a class="hub-card" href="#slides">
         <span class="ico">📊</span>
         <span><b>プレゼン資料（全${slideCount}枚）</b><span>このページ内で1枚ずつ見られます／PDFもあります</span></span>
@@ -333,7 +329,6 @@ ${submissionHtml(sub)}
     </p>
     <p>
       アプリ：<a href="https://ring-5oq.pages.dev">ring-5oq.pages.dev</a><br>
-      ソースコードと仕様書：<a href="https://github.com/yuu0428/ring">github.com/yuu0428/ring</a><br>
       解説（単一 HTML ファイル）：<a href="explain.html">explain.html</a><br>
       コード MIT ライセンス ／ 生成した区域データ CC BY 4.0
     </p>

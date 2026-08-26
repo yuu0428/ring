@@ -60,7 +60,7 @@ async function main(): Promise<void> {
 
   // 下端からはみ出しているスライドを検出する（本番で切れるのを防ぐ）
   const overflow = await page.evaluate((h) =>
-    [...document.querySelectorAll('.slide')].map((el, i) => {
+    Array.from(document.querySelectorAll('.slide')).map((el, i) => {
       const s = el as HTMLElement;
       return { n: i + 1, over: Math.max(0, s.scrollHeight - h) };
     }).filter((x) => x.over > 2), H);

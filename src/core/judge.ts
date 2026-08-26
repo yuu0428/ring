@@ -306,7 +306,7 @@ function finish(
     verdict.evidence = [
       {
         label: 'Ring のデータ出典一覧',
-        url: 'https://github.com/yuu0428/ring/blob/main/docs/DATA.md',
+        url: 'https://ring-5oq.pages.dev/explain.html',
         verifiedAt: '2026-08-23',
       },
     ];

@@ -38,6 +38,32 @@ async function headline(page: Page): Promise<string> {
   return (await page.locator('.headline').first().textContent())?.trim() ?? '';
 }
 
+/** 判定パネルの中身（見出し＋距離などの数値）をまとめて読む。判定が再計算されたかの指紋 */
+async function verdictFingerprint(page: Page): Promise<string> {
+  const head = await headline(page);
+  const metrics = (await page.locator('.metrics').first().textContent().catch(() => ''))?.trim() ?? '';
+  return `${head}|${metrics}`;
+}
+
+/** 地図中心の座標を読む */
+async function mapCenter(page: Page): Promise<{ lng: number; lat: number }> {
+  return page.evaluate(() => {
+    const m = (window as unknown as { __ringMap?: { getCenter(): { lng: number; lat: number } } }).__ringMap;
+    const c = m?.getCenter();
+    return { lng: c?.lng ?? 0, lat: c?.lat ?? 0 };
+  });
+}
+
+/** 2 点間の距離（m）。ヒュベニではなく十分な精度の球面近似 */
+function distanceM(a: { lng: number; lat: number }, b: { lng: number; lat: number }): number {
+  const R = 6378137;
+  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
+  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
+  const lat = ((a.lat + b.lat) / 2) * (Math.PI / 180);
+  const x = dLng * Math.cos(lat);
+  return Math.hypot(x, dLat) * R;
+}
+
 async function main(): Promise<void> {
   await mkdir(SHOTS, { recursive: true });
 
@@ -122,7 +148,8 @@ async function main(): Promise<void> {
   await grip.press('ArrowDown');
   await grip.press('ArrowDown');
   await page.waitForTimeout(300);
-  const before = await headline(page);
+  const before = await verdictFingerprint(page);
+  const centerBefore = await mapCenter(page);
   // 画面中央から大きくドラッグして、区域の外まで移動する
   const cx = MOBILE.width / 2;
   const cy = 260;
@@ -131,8 +158,15 @@ async function main(): Promise<void> {
   for (let i = 1; i <= 12; i++) await page.mouse.move(cx - i * 26, cy);
   await page.mouse.up();
   await page.waitForTimeout(1200);
-  const after = await headline(page);
-  check('地図を動かすと判定が更新される', before !== after || true, `${before} → ${after}`);
+  const after = await verdictFingerprint(page);
+  const centerAfter = await mapCenter(page);
+  const moved = distanceM(centerBefore, centerAfter);
+  // 「動かしたのに判定が同じ」を見逃さない。移動距離と判定内容の両方を要求する
+  check(
+    '地図を動かすと判定が更新される',
+    moved > 150 && after.length > 0 && after !== before,
+    `${Math.round(moved)}m 移動 / ${before} → ${after}`,
+  );
   await shot(page, '03-after-pan');
 
   // --- 高速な連続パンでも壊れないか（7.6）-------------------------------

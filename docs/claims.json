@@ -1,0 +1,15 @@
+{
+  "facts": {
+    "zones": 519,
+    "stations": 931,
+    "parkings": 159,
+    "parkingWards": 5,
+    "impounds": 8,
+    "impoundWards": 2,
+    "designatedStations": 519,
+    "abandonedAtDesignated": 13121,
+    "tierBZones": 519,
+    "tierAZones": 0
+  },
+  "checkedAt": "2026-08-26"
+}
